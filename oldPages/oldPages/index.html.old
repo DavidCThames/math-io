@@ -1,0 +1,36 @@
+<!doctype html>
+<html style="margin:0px; height:100vh" >
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body style="background-image: url(resources/images/Gateway.png); background-repeat: no-repeat; background-size: auto 100vh; height: 100vh; background-position: center 0%; margin:0px; text-align:center; position:fixed; top:0px; width:100vw;">
+<div style="margin:auto; min-width:270px; width:30%; -webkit-box-shadow: 0px 0px 20px; box-shadow: 0px 0px 20px; margin-top:50vh; margin-bottom:0px; overflow:hidden;" align="center">
+<br>
+<form method="post">
+<table border="0">
+  <tr>
+    <td><label>Username:</label></td>
+    <td><input type="text"></td>
+  </tr>
+  <tr>
+    <td><label>Password:</label></td>
+    <td><input type="password"></td>
+  </tr>
+  <tr>
+  	<td></td>
+    <td><input type="submit"></td>
+  </tr>
+  <tr>
+  	<td></td>
+  	<td><!--<a href="register.html" target="_top">New User</a>--></td>
+  </tr>
+
+</table>
+</form>
+  <p style="margin-bottom:100px; font-size: 10px">Contact us at Support@Math-IO.com</p>
+
+</div>
+</body>
+</html>

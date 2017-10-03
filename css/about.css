@@ -1,0 +1,377 @@
+/* CSS Document */
+
+.box {
+	width:100%;
+	height: 700px;
+	text-align:center;
+	border-top:rgba(159,159,159,1.00) solid thin;
+	box-sizing:border-box;
+}
+.container h1 {
+	box-shadow:#727272 0px 2px 1.5px;
+	margin-bottom:0;
+	color:rgba(87,87,87,1.00);
+}
+.container h2 {
+	font-family:"Roboto", "Helvetica Neue"; font-weight: 100;
+	font-size:40px;
+}
+.container p {
+	
+}
+
+/*Contents*/
+.contents {
+	height:300px;
+	border-top:none;
+}
+.contents > div{
+	height:200px;
+	width:100%;
+	max-width:700px;
+	margin-top:50px;
+	margin-left:auto;
+	margin-right:auto;
+	box-shadow:#727272 0px 1px 5px;
+}
+.contents  h3 {
+	border:rgba(159,159,159,1.00) solid thin;
+	background-color:white;
+	width:calc(100% / 3);
+	height:50%;
+	margin:0px;
+	float:left;
+	box-sizing:border-box;
+	transition:all .2s;
+	font-size:24px;
+	font-weight:300;
+	padding-top:30px;
+	cursor:pointer;
+}
+.contents h3:hover {
+	box-shadow:#727272 0px 0px 5px;
+	z-index:2;
+	position:relative
+}
+
+/*Purpose*/
+.purpose {
+	text-align:center;
+	background:rgba(251,0,154,1.00);
+	color:white;
+	height:350px;
+}
+.purpose p {
+	padding-left: 10%;
+	padding-right:10%;
+	box-sizing:border-box;
+	font-size:27px;
+	font-weight:300;
+	overflow:auto;
+	max-height:210px;
+}
+
+/*Beginnings*/
+.beginnings {
+	background-color:rgba(44,140,255,1.00);
+	color:white;
+}
+.beginnings h2 {
+	text-align:center;
+}
+.beginnings > p {
+	float:left;
+	width:calc(80% - 667px);
+	min-width:548px;
+	padding-left: 10%;
+	position:absolute;
+	
+	box-sizing:border-box;
+	font-size:24px;
+	font-weight:300;
+	overflow:auto;
+	max-height:500px;
+	z-index:10;
+	background-color:rgba(44,140,255,0.50)
+}
+.beginnings > img {
+	box-sizing:border-box;
+	height: 500px;
+	max-width:50%;
+	float:right;
+	margin-right:10%;
+	box-shadow: 0px 0px 10px #333333;
+	transform:rotate(5deg);
+	min-width:665px;
+}
+
+/*Description*/
+.description {
+	background:url(../resources/images/members/MathIO-001.jpeg) center no-repeat;
+	background-size:cover;
+	color:white;
+	text-align:center;
+	overflow:hidden;
+}
+.description > div {
+	height:700px;
+	width:100vw;
+	background:rgba(0,0,0,0.70);
+	overflow:hidden;
+}
+.description h2 {
+	
+}
+.description p {
+	position:relative;
+	left:10%;
+	width:80%;
+	padding-left: 10%;
+	padding-right:10%;
+	box-sizing:border-box;
+	font-size:24px;
+	font-weight:300;
+	overflow:auto;
+	max-height:500px;
+}
+
+.description img {
+	box-sizing:border-box;
+	height: 500px;
+	max-width:50%;
+	float:right;
+	margin-right:10%;
+	box-shadow: 0px 0px 10px #333333
+	min-width:665px;
+}
+
+/*Employees*/
+.employees {
+	width:100%;
+	/*padding-left:25%;
+	padding-right:25%;*/
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	height:550px;
+	transition:all .5s;
+	overflow:hidden;
+	background:#ececec;
+}
+.employees > h2 {
+}
+.employees h2.show {
+	font-family:"Roboto", "Helvetica Neue"; font-weight: 100;
+	font-size:35px;
+	height:75px;
+	padding-top:10px;
+	background:white;
+	box-sizing:border-box;
+	float:left;
+	cursor:pointer;
+	transition:all .3s;
+	color:black;
+	position: absolute;
+    bottom: 0px;
+	box-shadow:#434343 0px 2px 10px;
+    z-index: 2;
+	width:calc(100% - 20px);
+	margin:10px;
+}
+.employees h2.hide {
+	font-family:"Roboto", "Helvetica Neue"; font-weight: 100;
+	font-size:35px;
+	height:75px;
+	padding-top:10px;
+	background:white;
+	box-sizing:border-box;
+	float:left;
+	cursor:pointer;
+	transition:all .3s;
+	color:black;
+	box-shadow:#434343 0px 2px 10px;
+	position: absolute;
+    bottom: 0px;
+	width:calc(100% - 20px);
+	margin:10px;
+	
+
+}
+
+.employees h2.show:hover {
+	box-shadow:#434343 0px 2px 15px;
+}
+.employees h2.hide:hover {
+	box-shadow:#434343 0px 2px 15px;
+
+}
+.employees > div {
+	position:relative;
+	z-index:1;
+	overflow:hidden;
+	/*width:50%;*/
+	min-width:700px;
+	min-height:150px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-bottom:85px;
+}
+
+/*ECards*/
+.margin1 {
+			width:calc(50% - 3 * 145px);
+			height:10px;
+			float:left;
+		}
+		
+		.eBox {
+			width:250px;
+			float:left;
+			margin:20px;
+		}
+		
+		.eList.managers {
+			height:400px;
+		}
+		.eList.leaders {
+			height:250px;
+		}
+		
+		.eList  h3 {
+			font-family:"Roboto", "Helvetica Neue"; font-weight: 300;
+			font-size:24px;
+			width:100%;
+			margin:0px;
+			margin-top:10px;
+		}
+		.eList  p {
+			font-family:"Roboto", "Helvetica Neue"; font-weight: 300;
+			font-size:15px;
+			width:100%;
+			margin:0px;
+		}
+		.eList  .img {
+			border:solid 1px #878787;
+			border-radius:50%;
+			height:140px;
+			width:140px;
+			margin-top:2.5px;
+			margin-left:20px;
+			margin-right:20px;
+			background:url(../resources/images/user.png) center;
+			background-size:auto 142px !important; 
+			background-position:center !important; 
+			margin-left:auto;
+			margin-right:auto;
+			/*float: left;
+			height: 140px;
+			width: 140px;
+			margin-top: 2.5px;
+			margin-left: 20px;
+			margin-right: 20px;
+			background: url(resources/images/user.png) center;
+			background-size: auto 140px !important; 
+			background-position:center !important;*/
+		}
+
+/*Press*/
+.press {
+	background-color:rgba(255,56,56,1.00);
+	color:white;
+	text-align:center;
+	background:url(../ai/NewsPaper.svg) center no-repeat; 
+	background-size:cover;
+}
+.press h2 {
+	
+}
+
+.press .flex {
+	width:80%;
+	position:relative;
+	left:10%;
+	flex-wrap:wrap;
+	flex-direction: row;
+	align-items:center;
+	display:flex;
+}
+.press .card {
+	width:500px;
+	margin:10px;
+	flex-grow:1;
+	cursor:pointer;
+	text-align:left;
+	height:150px;
+	background:white;
+	box-sizing:border-box;
+	box-shadow:#3D3D3D 0px 2px 10px;
+	transition: all .3s;
+	overflow:hidden;
+}
+.press .card:hover {
+	box-shadow:#3D3D3D 0px 2px 20px;
+}
+.press .card > .text {
+	/*padding-top:16px;*/
+	overflow:auto;
+	height:100%;
+	box-sizing:border-box;
+}
+.press .card p {
+	margin-top:0;
+	color:#000000;
+	font-weight:500;
+}
+
+.press .card p:nth-child(2) {
+	margin:0;
+	font-weight:300;
+}
+
+.press .card img {
+	height:100%;
+	float:left;
+	margin-right:20px;
+}
+
+/*Press*/
+.legal {
+	background-color:#313131;
+	color:white;
+	text-align:center;
+}
+.legal h3 {
+	font-size:35px;
+	font-weight:300;
+	
+}
+
+.legal .flex {
+	width:80%;
+	position:relative;
+	left:10%;
+	flex-wrap:wrap;
+	flex-direction: row;
+	align-items:center;
+	display:flex;
+}
+.legal .card {
+	color:white;
+	display:block;
+	text-decoration:none;
+	width:500px;
+	margin:10px;
+	flex-grow:1;
+	cursor:pointer;
+	text-align:center;
+	height:150px;
+	background:white;
+	box-sizing:border-box;
+	box-shadow:black 0px 2px 10px;
+	transition: all .3s;
+	padding-top:15px;
+}
+.legal .card:hover {
+	box-shadow:black 0px 2px 25px;
+}
+

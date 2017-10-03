@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+*:before, *:after {
+  content: '';
+  display: block;
+  position: absolute;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+body {
+  background: #bbb;
+}
+
+.szene {
+  height: 300px;
+  background: #ddd;
+}
+
+.stage {
+  position: relative;
+  width: 560px;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing:border-box;
+  padding-left:20%
+  
+}
+
+/***************************************
+ * All Devices
+ */
+.device {
+  position: absolute;
+}
+
+.notebook {
+  bottom: -30px;
+  left: 0;
+}
+
+.ipad {
+  bottom: -50px;
+  left: 350px;
+}
+
+.iphone {
+  bottom: -60px;
+  left: 500px;
+}
+
+.screen {
+  position: relative;
+  margin: 13px auto 0;
+  border-radius: 2px;
+  background: #555;
+  overflow: hidden;
+}
+
+.shadow {
+  position: absolute;
+  z-index: -1;
+  bottom: -4px;
+  left: -4%;
+  width: 108%;
+  height: 8px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/***************************************
+ * Notebook
+ */
+.notebook {
+  width: 300px;
+  height: 185px;
+  border-radius: 10px 10px 0 0;
+  background: #fafafa;
+}
+
+.notebook:before {
+  top: 5px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  border-radius: 50%;
+  background: #aaa;
+}
+
+.notebook .screen {
+  width: 275px;
+  height: 160px;
+}
+
+.notebook .keyboard {
+  position: absolute;
+  top: 100%;
+  margin-left: -25px;
+  width: 350px;
+  height: 8px;
+  border-radius: 5px 5px 25px 25px;
+  background: #eaeaea;
+}
+
+.notebook .keyboard:after {
+  left: 50%;
+  margin-left: -25px;
+  width: 50px;
+  height: 4px;
+  border-radius: 0 0 8px 8px;
+  background: #ccc;
+}
+
+/***************************************
+ * Tablet
+ */
+.ipad {
+  width: 110px;
+  height: 150px;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.ipad:before {
+  top: 5px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  border-radius: 50%;
+  background: #aaa;
+}
+
+.ipad:after {
+  bottom: 5px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+}
+
+.ipad .screen {
+  width: 100px;
+  height: 125px;
+}
+
+/***************************************
+ * Smartphone
+ */
+.iphone {
+  width: 60px;
+  height: 110px;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.iphone:before {
+  top: 6px;
+  left: 50%;
+  width: 10px;
+  height: 2px;
+  margin-left: -5px;
+  border-radius: 4px;
+  background: #aaa;
+}
+
+.iphone:after {
+  bottom: 5px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+}
+
+.iphone .screen {
+  width: 52px;
+  height: 85px;
+}
+
+/***************************************
+ * Animation
+ */
+.animation {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background: #5b5;
+  -webkit-transform: scale(0.4, 0.4) translateX(500%);
+      -ms-transform: scale(0.4, 0.4) translateX(500%);
+          transform: scale(0.4, 0.4) translateX(500%);
+  -webkit-animation: 7s fly-in infinite;
+          animation: 7s fly-in infinite;
+  overflow: hidden;
+}
+
+@-webkit-keyframes fly-in {
+  0% {
+    -webkit-transform: scale(0.4, 0.4) translateX(500%);
+            transform: scale(0.4, 0.4) translateX(500%);
+  }
+  10% {
+    -webkit-transform: scale(0.4, 0.4) translateX(0);
+            transform: scale(0.4, 0.4) translateX(0);
+  }
+  20% {
+    -webkit-transform: scale(1, 1) translateX(0);
+            transform: scale(1, 1) translateX(0);
+  }
+  80% {
+    -webkit-transform: scale(1, 1) translateX(0);
+            transform: scale(1, 1) translateX(0);
+  }
+  90% {
+    -webkit-transform: scale(0.4, 0.4) translateX(0);
+            transform: scale(0.4, 0.4) translateX(0);
+  }
+  100% {
+    -webkit-transform: scale(0.4, 0.4) translateX(-500%);
+            transform: scale(0.4, 0.4) translateX(-500%);
+  }
+}
+
+@keyframes fly-in {
+  0% {
+    -webkit-transform: scale(0.4, 0.4) translateX(500%);
+            transform: scale(0.4, 0.4) translateX(500%);
+  }
+  10% {
+    -webkit-transform: scale(0.4, 0.4) translateX(0);
+            transform: scale(0.4, 0.4) translateX(0);
+  }
+  20% {
+    -webkit-transform: scale(1, 1) translateX(0);
+            transform: scale(1, 1) translateX(0);
+  }
+  80% {
+    -webkit-transform: scale(1, 1) translateX(0);
+            transform: scale(1, 1) translateX(0);
+  }
+  90% {
+    -webkit-transform: scale(0.4, 0.4) translateX(0);
+            transform: scale(0.4, 0.4) translateX(0);
+  }
+  100% {
+    -webkit-transform: scale(0.4, 0.4) translateX(-500%);
+            transform: scale(0.4, 0.4) translateX(-500%);
+  }
+}
+.browser {
+  height: 15px;
+  background: #3f9e3f;
+}
+.browser:before {
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 2px;
+  background: #5b5;
+}
+.browser:after {
+  top: 5px;
+  right: 5px;
+  height: 5px;
+  width: calc(100% - 20px);
+  border-radius: 2px;
+  background: #5b5;
+}
+
+.content {
+  position: relative;
+  width: 80%;
+  height: 4px;
+  margin: 10% 0 0 10%;
+  background: #3f9e3f;
+  box-shadow: 0 8px 0 #3f9e3f, 0 16px 0 #3f9e3f, 0 24px 0 #3f9e3f, 0 32px 0 #3f9e3f, 0 40px 0 #3f9e3f, 0 48px 0 #3f9e3f;
+  -webkit-animation: 7s pop-in infinite;
+          animation: 7s pop-in infinite;
+}
+.content:after {
+  top: 48px;
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: #5b5;
+}
+
+.notebook .content:before {
+  width: 32px;
+  height: 28px;
+  border-right: 4px solid #5b5;
+  background: #3f9e3f;
+}
+
+.ipad .content:before {
+  width: 24px;
+  height: 20px;
+  border-right: 4px solid #5b5;
+  background: #3f9e3f;
+}
+
+@-webkit-keyframes pop-in {
+  0% {
+    -webkit-transform: translateY(3000%);
+            transform: translateY(3000%);
+  }
+  18% {
+    -webkit-transform: translateY(3000%);
+            transform: translateY(3000%);
+  }
+  28% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    -webkit-transform: translateY(3000%);
+            transform: translateY(3000%);
+  }
+  18% {
+    -webkit-transform: translateY(3000%);
+            transform: translateY(3000%);
+  }
+  28% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/***************************************
+ * Codepen Preview
+ */
+@media only screen and (height: 300px) {
+  .szene {
+    height: 200px;
+  }
+
+  .stage {
+    width: 100%;
+    -webkit-transform: scale(0.8, 0.8);
+        -ms-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+}
+</style>
+</head>
+
+<body>
+<div class='szene'>
+  <div class='stage'>
+    <div class='device notebook'>
+      <div class='screen'>
+        <div class='animation'>
+          <div class='browser'></div>
+          <div class='content'></div>
+        </div>
+      </div>
+      <div class='keyboard'>
+        <div class='shadow'></div>
+      </div>
+    </div>
+    <div class='device ipad'>
+      <div class='screen'>
+        <div class='animation'>
+          <div class='browser'></div>
+          <div class='content'></div>
+        </div>
+      </div>
+      <div class='shadow'></div>
+    </div>
+    <div class='device iphone'>
+      <div class='screen'>
+        <div class='animation'>
+          <div class='browser'></div>
+          <div class='content'></div>
+        </div>
+      </div>
+      <div class='shadow'></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

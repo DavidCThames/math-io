@@ -1,0 +1,20 @@
+// JavaScript Document
+window.onload = mainMenu();
+
+function mainMenu() {
+	$("#MainMenu").css('display', '');
+	$("canvas").css('display', 'none');
+}
+
+var Gamemode
+function play() {
+	Gamemode = $('input[name=mode]:checked', '#MainMenu').val();
+	$("canvas").css('display', '');
+	$("canvas").width(window.innerWidth); //Sets size of Width
+    $("canvas").height(window.innerHeight); //Sets size of Height
+	$("#MainMenu").css('display', 'none');
+	var canvas = oCanvas.create({
+		canvas: "canvas",
+		background: "#0cc"
+	});
+}

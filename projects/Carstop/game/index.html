@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Carstop: a Physics game</title>
+</head>
+
+<script src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="yaycolors.css">
+<script> 
+$(document).ready(function(){
+});
+</script> 
+<body>
+
+<div class="scoreBar">
+	<p class="scoreClass"> Score: <span id="score"></span></p>
+</div>
+
+<script src="source.js"></script>
+
+<img src="carVectorCut.png" class="car"></img> 
+<img src="trafficConeOrange.svg" class="obstacle"></img>
+<!--<img src="trafficConeOrange.svg" class="obstacle" id="ob2"></img>
+<img src="trafficConeOrange.svg" class="obstacle" id="ob3"></img>-->
+<!--<div id="Menu" class="menu">
+
+<p>
+<img onClick="play(); velocity(); distance();" src="Images/PNGs/menuPlay.png">
+<img onClick="options()" src="Images/PNGs/menuOptions.png">
+<img onClick="help()" src="Images/PNGs/menuHelp.png">
+</p>
+
+
+
+</div>
+<div class="options"> 
+
+
+</div>
+<div class="help">
+
+</div> -->
+<div id="start">
+<button type="button" onClick="resetfunc()"> RELOAD </button></div>
+
+<script>
+function enter(e) {
+	//allows enter key to submit
+	console.log('hi'); var key = e.keyCode;
+    if(key == '13')
+		formulate();
+}
+</script>
+
+
+
+
+<!----------------->
+<div class="upperBar">
+	<div onClick='formulate()' class="submit">
+		<p>SUBMIT</p>
+	</div>
+
+	<div class="formula">
+		<p> Formula: D = <sup>Vi&sup2;</sup>&frasl;<sub>2a</sub></p>
+		<p id="reminder">Remember your Sig Figs and Units</p>
+	</div>
+
+</div>
+
+
+<div class="bottomBar">
+	<div class="accel">
+		
+  		Deceleration:<input type="accel" id="acceleration" onKeyPress="enter(event)"> </input> m/s<sup>2</sup>
+	</div>
+	<p class="distance"> Distance: <span id="distance"></span> m</p>
+	<p class="velocity"> Velocity: <span id="velocity"></span> m/s</p>
+</div>
+<!----------------->
+ 
+<!--D=((-Vi)^2)/(2a)-->
+
+</body>
+</html>

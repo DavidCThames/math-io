@@ -1,0 +1,122 @@
+// JavaScript Document
+window.onload = mainMenu();
+
+
+function mainMenu() {
+	$("#MainMenu").css('display', '');
+	$("canvas").css('display', 'none');
+}
+
+var Gamemode;
+var canvas;
+function play() {
+	Gamemode = $('input[name=mode]:checked', '#MainMenu').val();
+	$("canvas").css('display', '');
+	$("canvas").width(window.innerWidth); //Sets size of Width
+    $("canvas").height(window.innerHeight); //Sets size of Height
+	$("#MainMenu").css('display', 'none');
+	canvas = oCanvas.create({
+		canvas: "canvas",
+		background: "#0cc"
+	});
+	canvas.domReady(game());
+	
+}
+
+var line;
+var xaxis;
+var yaxis;
+var ellipse;
+function game() {
+	canvas.width *= 10;
+	canvas.height *= 10;
+	//===========Types of Shaps(oCanvas)============================================
+	line = canvas.display.rectangle({
+		x: canvas.width / 2,
+		y: canvas.height / 2,
+		origin: { x: "center", y: "top" },
+		width: 10,
+		height: 500,
+		fill: "red",
+		fps: 60,
+		shadow: "0 0 2px rgba(0,0,0, 0.8)"
+	});
+
+	xaxis = canvas.display.rectangle({
+		x: canvas.width / 2,
+		y: canvas.height / 2,
+		origin: { x: "center", y: "center" },
+		width: 5,
+		height: 1000,
+		fill: "gray",
+	});
+
+	yaxis = canvas.display.rectangle({
+		x: canvas.width / 2,
+		y: canvas.height / 2,
+		origin: { x: "center", y: "center" },
+		width: 5,
+		height: 1000,
+		rotation: 90,
+		fill: "gray",
+	});
+
+	ellipse = canvas.display.ellipse({
+		x: canvas.width / 2,
+		y: canvas.height / 2,
+		radius_x: 500,
+		radius_y: 500,
+		stroke: "gray"
+	});
+//==============================================================================
+	switch(Gamemode) {
+		case "1":
+			
+			canvas.addChild(line);
+			canvas.addChild(xaxis);
+			canvas.addChild(yaxis);
+			canvas.addChild(ellipse);
+			/*line.bind("spin", function () {
+					//line.stop().animate({
+					//x: canvas.width / 2,
+					//y: canvas.height / 1.5,
+					//height: 300,
+					line.rotation += pickAngle();
+					//});
+					this.trigger("spin");
+			});*/
+			var angle = pickAngle()
+			line.rotation = -90;
+			canvas.setLoop(function () {
+				line.rotation -= 10;
+				if (line.rotation <=  -90 - angle)
+					canvas.timeline.stop();
+			});
+			canvas.timeline.start();
+			$("#Theta").html(theta);
+		break;
+	}
+}
+
+var theta //the refrence angle 
+var phi; //angle without extra 360degs
+var angle; //tatal angle
+function pickAngle() {
+	
+	phi = Math.round(Math.random() * 3); //determine first quadrent angle
+	if (theta == 3) { //all other significant angles are multiples of 30deg so 45deg is done seperatly
+		phi = 45;
+	}
+	else {
+		phi = phi * 30;
+	}
+	phi = phi + (Math.round(Math.random() * 3) * 90); //spread angle out through all four quadrents
+	angle = phi + (Math.round(Math.random() * 4) * 360); //add multiples of 360deg
+	if (90 < phi && phi < 270)//determin refrence angle
+		theta = Math.abs(180 - phi);
+	else if(270 <= phi)
+		theta = Math.abs(360 - phi);
+	else 
+		theta = Math.abs(phi);
+	return angle
+}

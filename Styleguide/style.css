@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "Roboto Light";
+    src: url("fonts/Roboto-Light.ttf");
+}
+@font-face {
+    font-family:"Roboto", "Helvetica Neue";
+    src: url("fonts/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto Thin";
+    src: url("fonts/Roboto-Thin.ttf");
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Roboto Light";
+}
+header {
+    height: 175px;
+    border-bottom: 1px solid black;
+}
+header > h1 {
+    font-size: 40px;
+    display: inline-block;
+    margin-left: 1rem;
+    vertical-align: bottom;
+    cursor: default;
+    font-family: "Roboto Thin";
+}
+header > nav {
+    position: relative;
+    top: 1rem;
+    display: inline-block;
+    margin-left: 2.5rem;
+    font-family:"Roboto", "Helvetica Neue";
+}
+header ul {
+    display: inline-block;
+}
+header li {
+    list-style: none;
+}
+header li a {
+    line-height: 1.9;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: black;
+}
+header li a:hover {
+    color: gray;
+    cursor: pointer;
+}
+.container {
+    width: 100%;
+    height: calc(100vh - 200px + 2rem);
+}
+.container > div {
+    height: calc(100vh - 200px);
+    width: 50%;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+.container > h2 {
+    text-decoration: underline;
+}
+/*Code block*/
+
+.code {
+    border: 1px solid black;
+    border-style: inset;
+    background: linear-gradient(#D0D0D0, #F0F0F0 0.5%);
+    margin-bottom: 2rem;
+    font-family: monospace;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+footer > p {
+    margin: 0px;
+    background-color: #1D1D1D;
+}
+footer span {
+    color: hsla(0, 0%, 61%, 1.00)
+}
+footer a {
+    color: #0080D1;
+    text-decoration: none;
+}
+@media (min-width: 1200px) {
+    header,
+    .container div {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .container div {
+        margin-left: calc(10% + 2rem);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .container h2 {
+        text-align: center;
+    }
+}
+@media (max-width: 650px) {
+    header {
+        text-align: center;
+        border-bottom: none;
+    }
+    header nav {
+        display: block;
+        top: -1rem;
+        right: 3rem;
+    }
+    header ul {
+        display: block;
+    }
+    header li {
+        display: inline-block;
+        margin-left: 2rem;
+    }
+}

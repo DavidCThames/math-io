@@ -1,0 +1,269 @@
+/* CSS Document */
+@import url("../webfonts/stylesheet.css");
+@import url("../webfonts/Roboto_Regular/stylesheet.css");
+@import url("../webfonts/Roboto_Light/stylesheet.css");
+
+input[type=submit], input[type=button]  {
+	padding:20px;
+	min-width:20vw;
+	min-height:2vw;
+	font-size:1vw;
+	border: white solid medium;
+	border-radius: 5px;
+	outline:none;
+	background:none;
+	font-size:48px;
+	transition:all .3s;
+	font-family:"Roboto"; font-weight: 300;
+	color:white;
+	cursor:pointer;
+}
+
+input[type=submit]:hover, input[type=button]:hover  {
+	background: white;
+	color:#0C99FF;
+}
+.scrollNotif {
+	width: 100vw;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	height:80px;
+	background-color:rgba(255,255,255,0.5);
+	z-index:1000;
+	text-align:center;
+}
+
+.scrollNotif p {
+	font-size:30px;
+	margin:0px;
+	font-family:"Roboto"; font-weight: 300;
+	color:rgba(60,60,60,1.00);
+}
+
+.scrollNotif img {
+	height:40px;
+}
+.window {
+	width:100%;
+}
+
+.window h1 {
+	font-size:70px;
+	font-family:"Roboto"; font-weight: 100;
+	margin-top:0px;;
+}
+
+.panle {
+	width: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	height: 700px;
+	text-align:center;
+	overflow:hidden;
+	color:white;
+}
+
+.window p {
+	font-size:30px;
+}
+
+.window table {
+	font-size:30px;
+}
+
+.panle.title {
+	height:200px;
+	background-color:hsla(0,0%,20%,1.00);
+	color:white;
+	padding-top:40px;
+	box-sizing:border-box;
+}
+
+.center {
+	width:100%;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:1400px;
+	position:absolute;
+	left:0px;
+	right:0px;
+}
+
+.panle img {
+	width:1400px;
+	height:700px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#teacher {
+	background-color:hsla(216,100%,60%,1.00);
+	color:white;
+}
+#student {
+	background-color:hsla(0,100%,63%,1.00);
+	color:white;
+}
+
+#student p {
+	float:right;
+	width:50%;
+}
+
+#teacher img, #student img {
+	top:100px;
+}
+
+#teacher img {
+	left:calc(50% - 235px);
+}
+
+#payment {
+	background:url(../resources/images/coins.jpg);
+}
+
+#payment p {
+	padding-right:50%;
+}
+
+.panle .card {
+	width:300px;
+	height:400px;
+	float: right;
+	position:relative;
+}
+
+#payment table {
+	float:left;
+	width:50%;
+}
+
+#account {
+	background: url(../resources/images/laptop.jpg);
+	color: rgba(59,59,59,1.00);
+	background-size: cover;
+	background-position: center left;
+	text-shadow: 0px 0px 20px rgba(255,255,255,1.00);
+}
+
+.create {
+	width:30%;
+	position:relative;
+}
+
+#account input[type=submit], #account input[type=button]  {
+	text-align: center;
+	background-color: rgba(9,145,0,1.00);
+	-webkit-box-shadow: 1px 1px 1px rgba(7,124,0,1.00);
+	box-shadow: 1px 1px 1px rgba(7,124,0,1.00);
+	border:0px;
+	min-width:6vw;
+	min-height:2vw;
+	line-height:1.5vw;
+	font-size:1vw;
+	font-family:"Roboto"; font-weight: 300;
+	color:white;
+	cursor:pointer;
+}
+
+#account input[type=submit]:hover, #account input[type=button]:hover  {
+	background-color: rgba(7,124,0,1.00);
+}
+
+#account input[type=text], input[type=password], input[type=email] {
+	height:25px;
+	line-height:25px;
+	font-size:20px;
+	font-family:"Roboto"; font-weight: 300;
+}
+
+#account .box {
+	margin-left: auto; 
+	margin-right: auto; 
+	padding-bottom:20px;
+	width: 20%; 
+	-webkit-box-shadow: 0px 0px 10px rgba(91,91,91,1.00); 
+	box-shadow: 0px 0px 10px rgba(91,91,91,1.00); 
+	overflow:hidden;
+	background-color:hsla(0,0%,100%,0.51);
+}
+
+#account h1 {
+	margin-top 10px;
+}
+
+#account h3 {
+	background-color:rgba(255,42,45,1.00);
+	color:white;
+	margin-top:0px;
+	margin-bottom:5px;
+}
+
+#account h2 {
+	margin-top: 0px;
+}
+
+#buy {
+	background-color:rgba(113,255,85,1.00);
+}
+#learn {
+	background-color:hsla(28,100%,64%,1.00);
+}
+
+#learn div {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items: center;
+	float:left; 
+	display:flex; 
+	height: 550px;
+}
+
+#learn input {
+	height:150px;
+}
+
+#learn input:hover {
+	color:hsla(28,100%,64%,1.00);
+}
+
+#learn #btnTutorial:hover {background-color:hsla(216,100%,59%,1.00);}
+#learn #btnAbout:hover {background-color:hsla(0,100%,59%,1.00);}
+#learn #btnLegal:hover {background-color:hsla(133,100%,59%,1.00);}
+
+#play input {
+	height:100px;
+}
+
+#play input:hover {
+	color:hsla(0,0%,15%,1.00);
+}
+
+#play div {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content:center;
+	display:flex; 
+	height: 550px;
+}
+	#play object {
+		height: 58.334vw;
+		min-height:700px;
+	}
+
+object {
+	height:700px;
+}
+svg a:hover > path {
+	fill:white !important;
+}
+svg a:hover > text {
+	fill:#71FF55 !important;
+}
+svg path, scg a {
+	transition:all .3s;
+}

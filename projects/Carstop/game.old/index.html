@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<script src="jquery.js"></script>
+<script src="source.js"></script>
+<link rel="stylesheet" type="text/css" href="yaycolors.css">
+<script> 
+$(document).ready(function(){
+});
+</script> 
+<body>
+<img src="carVectorCut.png" class="car"></img> 
+<div id="Menu" class="menu">
+
+<p>
+<img onClick="play()" src="Images\PNGs\menuPlay.png">
+<img onClick="options()" src="Images\PNGs\menuOptions.png">
+<img onClick="help()" src="Images\PNGs\menuHelp.png">
+</p>
+
+
+
+</div>
+<div class="options"> 
+
+
+</div>
+<div class="help">
+
+</div> 
+<div id="start"><button type="button" onClick="distance(); velocity(); remStart(); btrue();"> START </button></div>
+<script>
+function enter(e) {
+	//allows enter key to submit
+	console.log('hi'); var key = e.keyCode;
+    if(key == '13')
+		formulate();
+}
+</script>
+
+<!----------------->
+<div class="upperBar">
+<div onClick='formulate()' class="submit"> SUBMIT </div>
+
+<div class="formula"> Formula: D = <sup>Vi&sup2;</sup>&frasl;<sub>2a</sub></div>
+</div>
+
+
+<div class="bottomBar">
+	<div class="accel">
+		
+  		Acceleration:<input type="accel" id="acceleration" onKeyPress="enter(event)"> </input> MPH&sup2;
+	</div>
+	<p class="distance"> Distance: <span id="distance"></span> mi</p>
+	<p class="velocity"> Velocity: <span id="velocity"></span> MPH</p>
+
+<!----------------->
+ 
+<!--D=((-Vi)^2)/(2a)-->
+
+</body>
+</html>

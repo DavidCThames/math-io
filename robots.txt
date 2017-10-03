@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /unneeded/
+Disallow: /.htpasswds/
+Disallow: /unneeded/

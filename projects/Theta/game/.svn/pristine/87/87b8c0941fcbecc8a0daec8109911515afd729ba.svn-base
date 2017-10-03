@@ -1,0 +1,114 @@
+@import url("webfonts/Roboto_Light/stylesheet.css");
+
+/* CSS Document */
+
+h1 {
+    font-style: italic;
+    font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;
+    font-variant: normal;
+    font-weight: lighter;
+    color: rgb(244, 75, 75);
+    -webkit-tap-highlight-color: #ff5e99;
+    hi
+}
+h2 {
+    text-decoration: underline;
+    color: rgb(127, 127, 127);
+    font-family: "Roboto Light";
+}
+h3 {
+    color: rgba(127, 127, 127, 1.00);
+    font-family: "Roboto Light";
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+}
+canvas {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+td {
+    width: 50%;
+}
+::selection {
+    background: #ff5e99;
+    /* Safari */
+}
+::-moz-selection {
+    background: #ff5e99;
+    /* Firefox */
+}
+#MainMenu {
+    text-align: center;
+    font-family: 'Roboto Light';
+    color: rgba(255, 255, 255, 1.00);
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.GameModes {
+    display: inline-block;
+    width: 35%;
+    -webkit-box-shadow: 0px 0px 5px rgba(103, 103, 103, 1.00);
+    box-shadow: 0px 0px 5px rgba(103, 103, 103, 1.00);
+}
+input[type=button] {
+    background-color: rgba(76, 249, 90, 1.00);
+    border-color: rgba(0, 0, 0, 0.00);
+    -webkit-box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    width: 40%;
+    cursor: pointer;
+}
+input[type=button]:hover {
+    background-color: rgba(56, 189, 67, 1.00);
+}
+#submit {
+    margin: auto;
+    background-color: rgba(76, 249, 90, 1.00);
+    border-color: rgba(0, 0, 0, 0.00);
+    -webkit-box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    width: 80%;
+    cursor: pointer;
+}
+#submit:hover {
+    background-color: rgba(56, 189, 67, 1.00);
+}
+input[type=checkbox] {
+    display: none;
+    margin: 10px;
+}
+input[type=checkbox] + label {
+    display: inline-block;
+    margin-right: 4px;
+    margin-left: 4px;
+    padding: 4px 12px;
+    background-color: hsla(211, 71%, 52%, 1.00);
+    border-color: #001786;
+    -webkit-box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    width: 60%;
+    cursor: pointer;
+}
+input[type=checkbox]:checked + label {
+    background-image: none;
+    background-color: hsla(211, 59%, 40%, 1.00);
+}
+input[type=checkbox] + label:hover {
+    background-image: none;
+    background-color: hsla(211, 59%, 40%, 1.00);
+}
+#panel {
+    width: 15vw;
+    background-color: rgba(255, 255, 255, 1.00);
+    position: absolute;
+    right: 5vw;
+    top: 30vh;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 20px rgba(98, 98, 98, 1.00);
+    box-shadow: 0px 0px 20px rgba(98, 98, 98, 1.00);
+}

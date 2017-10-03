@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="Layer_2" display="none">
+	<line display="inline" fill="#3776FF" x1="0" y1="47" x2="100" y2="47"/>
+	<line display="inline" fill="#1A00FF" x1="50" y1="0" x2="50" y2="100"/>
+</g>
+<g id="Layer_1">
+	<text transform="matrix(1 0 0 1 37.7185 64.6201)" font-family="'MyriadPro-Regular'" font-size="50">2</text>
+	<g>
+		<line x1="25.1" y1="56.5" x2="31.1" y2="63.7"/>
+		<g>
+			<path d="M23.3,58.3c2,2.4,4,4.8,6,7.2c0.9,1,2.6,0.9,3.5,0c1-1,0.9-2.5,0-3.5c-2-2.4-4-4.8-6-7.2c-0.9-1-2.6-0.9-3.5,0
+				C22.3,55.8,22.5,57.2,23.3,58.3L23.3,58.3z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path d="M34,64c0-12.3,0-24.7,0-37c0-3.2-5-3.2-5,0c0,12.3,0,24.7,0,37C29,67.2,34,67.2,34,64L34,64z"/>
+		</g>
+	</g>
+	<g>
+		<g>
+			<path d="M32,29c11.8,0,23.6,0,35.4,0c3.2,0,3.2-5,0-5c-11.8,0-23.6,0-35.4,0C28.8,24,28.8,29,32,29L32,29z"/>
+		</g>
+	</g>
+</g>
+</svg>

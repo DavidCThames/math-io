@@ -1,0 +1,42 @@
+<!doctype html>
+<html style="font-family: 'Roboto Thin';">
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Math I/O</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="../webfonts/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="body" onLoad="startup()" style="text-align: center; background-color: rgba(255,255,255,1.00); background-image: url(../resources/images/background2.png); background-repeat: repeat-x; margin: 0px; background-size: auto 810px;">
+
+<img id="bkground" src="../resources/images/background.jpg" style="width: 100%; max-width: 1080px; opacity: 1; z-index: 2;" alt=""/>
+
+<!--Tabs-->
+<div id="tabCenter" style="position: absolute; top: 11vw; max-height: 74px; height: 7vw; z-index: 1; text-align: center; width: 100%; ">
+<div id="tabDIV" style="margin-left: auto; margin-right: auto; width: 69vw; max-width: 747px; height: 100%;">
+
+<table width="100%" border="0" height="100%">
+  <tr>
+    <td id="tab1" onClick=link("index") onMouseOut="tabOutMouse(this.id)" onMouseOver="tabMouse(this.id)" class="tab">Home</td>
+    <td id="tab2" onClick=link("about") onMouseOut="tabOutMouse(this.id)" onMouseOver="tabMouse(this.id)" class="tab">About</td>
+    <td id="tab3" onClick=link("games") onMouseOut="tabOutMouse(this.id)" onMouseOver="tabMouse(this.id)" class="tab">Games</td>
+    <td id="tab4" onClick=link("account") onMouseOut="tabOutMouse(this.id)" onMouseOver="tabMouse(this.id)" class="tab">Account</td>
+    <td id="tab5" onClick=link("contact") onMouseOut="tabOutMouse(this.id)" onMouseOver="tabMouse(this.id)" class="tab">Contact</td>
+  </tr>
+</table>
+<!-- TemplateBeginEditable name="EditRegion1" -->
+<!-- TemplateEndEditable -->
+</div>
+</div>
+<p></p>
+<iframe id="iframe1" style="width: 100%; -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,1.00); box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,1.00);" src="game.html" frameborder="0" seamless scrolling="no" onLoad="autoResize('iframe1')" ></iframe>
+
+</body>
+<script src="../js/template.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/template.css">
+
+</html>

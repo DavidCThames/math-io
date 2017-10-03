@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home - My Site</title>
+  </head>
+  <body>
+    <!-- Every smoothState container needs an id -->
+    <div id="main">
+      <!-- Every link should return a full layout -->
+      <ul>
+        <li><a href="transition.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <!-- Contents of the page... -->
+    </div>
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script> 
+    <script src="js/jquery.smoothState.js"></script>
+  </body>
+</html>
+
+<script>
+// Contents of functions.js
+;(function ($) {
+    $('#main').smoothState();
+})(jQuery);
+</script>
+
+</body>
+</html>

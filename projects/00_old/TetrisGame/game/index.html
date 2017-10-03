@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="StyleSheet.css"></link>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div id="menu">
+        <h1>Tetris Game</h1>
+        <div id="left">
+            <h2> Equation List</h2>
+            <input type="checkbox" id="check1" value="Quadratic" />
+            <label for="check1">Quadratic</label>
+            <br>
+            <input type="checkbox" id="check2" value="Absolute" />
+            <label for="check2">Absolute</label>
+            <br>
+            <input type="checkbox" id="check3" value="squareRoot" />
+            <label for="check3">Square Root</label>
+            <br>
+            <input type="checkbox" id="check4" value="Log" />
+            <label for="check4">Logrithmic</label>
+            <br>
+            <input type="checkbox" id="check5" value="Exp" />
+            <label for="check5">Exponential</label>
+            <br>
+            <input type="checkbox" id="check6" value="arcSin" />
+            <label for="check6">Arc Sin</label>
+            <br>
+            <input type="checkbox" id="check7" value="arcCos" />
+            <label for="check7">Arc Cos</label>
+            <br>
+        </div>
+        <div id="right">
+            <h2>Mode</h2>
+            <input type="radio" id="radio1" name='mode' value="k" />
+            <label for="radio1">Vertical Shift Only</label>
+            <br>
+            <input type="radio" id="radio2" name='mode' value="h" />
+            <label for="radio2">Horizontal Shift Only</label>
+            <br>
+            <input type="radio" id="radio3" name='mode' value="hk" />
+            <label for="radio3">Both</label>
+            <br>
+            <br>
+            <input type="checkbox" id='parent' value='true' />
+            <label for='parent'>Choose parent function in game?</label>
+            <input type="button" id='speed' />
+            <label for='speed'>Speed: <span id='speedLabel' style='color:orange;'>Medium</span>
+            </label>
+            <br>
+            <br>
+            <div id="Play">Play!</div>
+        </div>
+    </div>
+
+    <div id='bar'>
+        <span><strong>Q</strong>uadratic</span>
+        <span><strong>A</strong>bsolute</span>
+        <span>Square <strong>R</strong>oot</span>
+        <span><strong>L</strong>ogarithmic</span>
+        <span><strong>E</strong>xponential</span>
+        <span>Arc <strong>S</strong>in</span>
+        <span>Arc <strong>C</strong>os</span>
+    </div>
+    <canvas id="myCanvas" width="578" height="300"></canvas>
+    <div id="score"></div>
+
+    <!--Inputs-->
+    <div class="input" id="Quadratic">
+        <span class="vStretch"></span>
+        (
+        <span class="hStretch"></span> X +
+        <input class="hShift" type="text" />)^2 +
+        <input class="vShift" type="text" />
+    </div>
+    <div class="input" id="Absolute">
+        <span class="vStretch"></span> * |
+        <span class="hStretch"></span>X +
+        <input class="hShift" type="text" />| +
+        <input class="vShift" type="text" />
+    </div>
+    <div class="input" id="squareRoot">
+        <span class="vStretch"></span> * sqrt(
+        <span class="hStretch"></span>X +
+        <input class="hShift" type="text" />) +
+        <input class="vShift" type="text" />
+    </div>
+    <div class="input" id="Log">
+        <span class="vStretch"></span> * log(
+        <span class="hStretch"></span>X +
+        <input class="hShift" type="text" />) +
+        <input class="vShift" type="text" />
+    </div>
+    <div class="input" id="Exp">
+        <span class="vStretch"></span> * 2^(
+        <span class="hStretch"></span>X +
+        <input class="hShift" type="text" />) +
+        <input class="vShift" type="text" />
+    </div>
+    <div class="input" id="arcSin">
+        <span class="vStretch"></span> * arcSin(
+        <span class="hStretch"></span>X +
+        <input class="hShift" type="text" />) +
+        <input class="vShift" type="text" />
+    </div>
+    <div class="input" id="arcCos">
+        <span class="vStretch"></span> * arcCos(
+        <span class="hStretch"></span>X +
+        <input class="hShift" type="text" />) +
+        <input class="vShift" type="text" />
+    </div>
+
+    <script src="Game.js"></script>
+    <script src="Graph.js"></script>
+    <script src="Line.js"></script>
+    <script src="Script.js"></script>
+</body>
+
+</html>

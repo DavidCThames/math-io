@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<font horiz-adv-x="2048">
+<!-- Microsoft Sans Serif is either a registered trademark or a trademark of Microsoft Corporation in the United States and/or other countries. -->
+<!-- Copyright: Copyright 2014 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="MicrosoftSansSerif" units-per-em="2048" underline-position="-220" underline-thickness="102"/>
+<missing-glyph horiz-adv-x="600" d="M50,0l0,1536l500,0l0,-1536M158,108l284,0l0,1320l-284,0z"/>
+<glyph unicode="?" horiz-adv-x="1139" d="M94,1067C105,1197 154,1300 241,1377C327,1453 436,1491 569,1491C710,1491 823,1454 910,1379C997,1304 1040,1208 1040,1092C1040,1027 1025,966 996,910C966,854 910,792 828,724C746,656 696,602 677,562C658,521 649,454 649,360l-176,0C473,484 487,575 516,633C545,690 598,752 675,817C752,882 799,933 818,968C837,1003 846,1040 846,1079C846,1156 821,1219 770,1269C719,1318 653,1343 571,1343C411,1343 317,1251 289,1067M670,0l-205,0l0,205l205,0z"/>
+</font>
+
+	<text transform="matrix(1 0 0 1 33.3156 69.2629)" style="fill:#FFFFFF; font-family:'MicrosoftSansSerif'; font-size:60;">?</text>
+<circle style="fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;" cx="50" cy="50" r="35"/>
+</svg>

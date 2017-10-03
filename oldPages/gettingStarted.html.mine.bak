@@ -1,0 +1,237 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/desktop.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Math I/O | Marketing</title>
+<style>
+@import url("css/gettingStarted.css");
+</style>
+<!-- InstanceEndEditable -->
+<style>
+@import url("webfonts/Roboto_Thin/stylesheet.css");
+@import url("webfonts/Roboto_Regular/stylesheet.css");
+@import url("webfonts/Roboto_Light/stylesheet.css");
+@import url("webfonts/Socialico/stylesheet.css");
+@import url("css/styleDesktop.css");
+</style>
+<link href="webfonts/Socialico/stylesheet.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<!--<script src="../js/buildBoxes.js"></script>-->
+<script src="js/Boxes.js"></script>
+<script src="js/script.js"></script>
+<script src="js/scriptOther.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+
+</head>
+
+<body style="position: absolute; top: 0px; left:0px; width:100%; margin:0px">
+
+<header>
+<nav class="smallBar">
+    <section></section>
+	<a href="mainPage.html"><div><h2>Home</h2></div></a>
+    <a href="about.html"><div><h2>About</h2></div></a>
+    <a href="games.html"><div><h2>Games</h2></div></a>
+    <a href="accounts.html"><div><h2>Accounts</h2></div></a>
+    <a href="contact.html"><div><h2>Contact us</h2></div></a>
+    <a href="mobile.html"><div><h2>Mobile site</h2></div></a>
+    <section></section>
+</nav>
+
+<div class="socialbar">
+    	<p><a style="background-color:blue" href="https://www.facebook.com/ninjacstudiosmathio">F</a><a style="background-color:red" href="http://plus.google.com">G</a><a style="background-color:#0084FF" href="https://twitter.com/math_io">L</a><a style="background-color:#FFBB11" href="http://blog.math-io.com">W</a></p>
+</div>
+<iframe class="status" src="user/status.php" seamless></iframe>
+<div class="topbar" style="opacity: 1;">
+	<section>
+		<h1>Math I/O</h1>
+        <!-- InstanceBeginEditable name="nav" -->
+        <select onChange="smallNav(this)" class="miniNav">
+              <option value="mainPage.html" selected>Home</option>
+              <option value="about.html">About</option>
+              <option value="games.html">Games</option>
+              <option value="account.php">Account</option>
+              <option value="contact.html">Contact us</option>
+              <option value="mobile.html">Mobile site</option>
+        </select>
+        <!-- InstanceEndEditable -->
+        <div class="accPlaceholder"></div>
+        <nav>
+        	<table>
+            <tr>
+        		<td><a href="index.html">Home</a><br></td>
+            	<td><a href="account.php">Account</a><br></td>
+            </tr><tr>
+            	<td><a href="about.html">About</a><br></td>
+            	<td><a href="contact.html">Contact us</a><br></td>
+            </tr><tr>
+            	<td><a href="games.html">Games</a><br></td>
+            	<td><a href="mobile.html">Mobile site</a><br></td>
+            </tr>
+            </table>
+        </nav>
+    </section>
+</div>
+</header>
+
+<div class="container">
+	<!--Warning: do not use div here-->
+    <!-- InstanceBeginEditable name="body" -->
+	<div class="scrollNotif" data-0="opacity:1; !display:block;" data-100="opacity:0; display:block; bottom:0px" data-101="bottom:-500px;">
+		<p>scroll for more</p>
+		<!--<img src="resources/images/scroll.png">-->
+		<img src="resources/images/scroll.png">
+	</div>
+	
+    <div class="window">
+		<div id="overview" class="panle title">
+			<h1> Overview </h1>
+		</div>
+		<div id="teacher" class="panle">
+			<div class="center">
+			<img
+				src="resources/images/marketing/teacher_1.png" 
+				data-400="top:100px;"
+				data-1250="top:850px;"
+			>
+			<img
+				src="resources/images/marketing/teacher_2.png"
+				data-400="opacity:0; top:100px;"
+				data-600="opacity:1; top:275px;"
+				data-1250="top:850px;"
+			>
+			<h1>Teacher</h1>
+			<p>The teacher can buy a membership on his or her account that allowes full access on any one computer to all games on Math I/O.</p>
+			</div>
+		</div>
+		<div id="student" class="panle">
+			<div class="center">
+			<img
+				src="resources/images/marketing/student_1.png" 
+				data-200="opacity:0;top:-400px;"
+				data-700="opacity:0; top:-400px;"
+				data-1100="opacity:1; top:100px;"
+			>
+			<img
+				src="resources/images/marketing/student_2.png"
+				data-200="opacity:0; top:-400px;"
+				data-700="opacity:0; top:-400px;"
+				data-1100="opacity:0; top:100px;"
+				data-1300="opacity:1;"
+			>
+			<h1>Student</h1>
+			<p>Once the Teacher has an acount he or she can buy student accounts in bulk to allow access to the games from multiple computers simultaneously. Multiple student packages can be bought together to handle different numbers of students.</p>
+			</div>
+		</div>
+		<div id="payment" class="panle">
+			<div class="center">
+			<h1>Payment</h1>
+			<p>You can pay through credit, debit, or PayPal.
+			<table style="margin-top:100px;" border="1" bordercolor="#FFFFFF" cellspacing="0">
+				<tr>
+					<th scope="col">Account Type</th>
+					<th scope="col">Price</th>
+				</tr>
+				<tr>
+					<td>Teacher</td>
+					<td>$10</td>
+				</tr>
+				<tr>
+					<td>10 Students</td>
+					<td>$7</td>
+				</tr>
+				<tr>
+					<td>20 Students</td>
+					<td>$10</td>
+				</tr>
+				<tr>
+					<td>50 Students</td>
+					<td>$20</td>
+				</tr>
+			</table>
+
+
+			<img 
+				data-bottom-top="opacity:0; margin-top:500px;" 
+				data-top="opacity:1; margin-top:0px;" 
+				class="card" src="resources/images/marketing/payment.png">
+			</div>
+		</div>
+		<div id="overview" class="panle title">
+			<h1> Get Started </h1>
+		</div>
+		<div id="account" class="panle">
+			<h1>Create an Account</h1>
+			<div class="create box">
+				<div>
+				<h3>After creating an account press back in your browser to return to this page and continue.</h3>
+				<form action="account.php" method="post">
+				<label style='display: block; width: inherit; text-align: center;'>Username:</label>
+                    <input type="text" required="required" style="width: 90%;">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Password:</label>
+                    <input type="password" required="required" style="width: 90%;">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Student Password:</label>                   <input type="password" required="required" style="width: 90%;">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Email:</label>
+                    <input type="email" required="required" style="width: 90%;">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Phone:</label>
+                    <input required="required"  style="width: 90%;" type="text">
+					</br></br>
+				
+				<input type="submit" value='Create'>
+				</form>
+				</div>
+			</div>
+		</div>
+		<div id="buy" class="panle">
+			<object type="image/svg+xml" data="ai/buy.svg" class="logo">
+				<a src="buy.html">Buy</a>
+			</object>
+		</div>
+		<div id="learn" class="panle">
+			<h1>Learn</h1>
+			<div>
+				<input id="btnTutorial" type="button" value="Tutorial" onClick="link('tutorial.html')">
+				<input id="btnAbout" type="button" value="About" onClick="link('about.html')">
+				<input id="btnLegal" type="button" value="Legal" onClick="link('legal/legal.html')">
+			</div>
+			<object type="image/svg+xml" data="ai/questionMark.svg" class="logo" style="width:25vw; height:550px; float:right;"
+				data-bottom-top="opacity:0; transform:rotate(180deg)" 
+				data-200-top="opacity:1; transform:rotate(0deg);" 
+			>
+				Your browser does not support SVG
+			</object>
+		</div>
+		<div id="play" class="panle">
+		<object type="image/svg+xml" data="ai/playBG/playBG.svg" class="logo" style=" position:absolute; top:0px; left:0px; z-index:-1;"></object>
+			<h1>Play</h1>
+			<div>
+				<input id="btnTutorial" type="button" value="Play" onClick="link('mainPage.html')">
+				<input id="btnAbout" type="button" value="Search Games" onClick="link('games.html')">
+			</div>
+		</div>
+	</div>
+    
+    
+    
+    
+
+	<!-- InstanceEndEditable -->
+	<footer style="text-align:center;">
+			<p><span style="color:hsla(0,0%,61%,1.00)">© 2014 Math I/O LLC. All Rights Reserved</span> | <a href="legal/legal.html">Legal Stuff</a> | <a href="privacyPolicy.html">Privacy Policy</a> | <a href="termsOfUse.html">Terms of Use</a></p>
+		</footer>
+</div>
+<div style="float:right; width:calc(50% - 800px); height:100vh;"></div>
+	<!-- InstanceBeginEditable name="bodyEnd" -->
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+	<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

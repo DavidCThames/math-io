@@ -1,0 +1,79 @@
+<!doctype html>
+<html style="overflow:hidden; width:100vw; height:100vh; width: 100vw; height: 100vh;">
+<head>
+<meta charset="utf-8">
+<title>Graph Game - Math IO</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  <!--$("#mouse").click(function(){-->
+	var mouse=$("#mouse");
+	var backgr=$("#back");
+	var text=$("#skip");
+    mouse.delay(1000).animate({left:'13vw',top:'8vh'},3000, "swing");
+	
+	backgr.delay(4500).queue(function (next) {backgr.attr("src", "../../resources/projects/Anim/GraphGame2.png"); next(); });
+	backgr.delay(1000).queue(function (next) {backgr.attr("src", "../../resources/projects/Anim/GraphGame3.png"); next(); });
+    mouse.delay(2000).animate({left:'20vw',top:'8vh'},"slow");
+	backgr.delay(1500).queue(function (next) {backgr.attr("src", "../../resources/projects/Anim/GraphGame4.png"); next(); });
+	backgr.delay(1000).queue(function (next) {backgr.attr("src", "../../resources/projects/Anim/GraphGame5.png"); next(); });
+    mouse.delay(2000).animate({left:'29vw',top:'8vh'},"slow");
+	backgr.delay(1500).queue(function (next) {backgr.attr("src", "../../resources/projects/Anim/GraphGame6.png"); next(); });
+	backgr.delay(1000).queue(function (next) {backgr.attr("src", "../../resources/projects/Anim/GraphGame7.png"); next(); });
+    mouse.delay(2000).animate({left:'35vw',top:'8vh'},"slow");
+	backgr.delay(2500).queue(function (next) {backgr.attr("src", "../../resources/projects/Anim/GraphGame8.png"); next(); });
+	backgr.delay(500).fadeOut("slow");
+	mouse.delay(2000).fadeOut("slow");
+	text.delay(14000).fadeOut("slow");
+  <!--});-->
+});
+
+function onKeyDown(key)
+{
+    // Detect which key was pressed
+	if( key.keyCode ==  32){
+		document.getElementById("back").style.opacity = 0;
+		document.getElementById("skip").style.opacity = 0;
+		document.getElementById("mouse").style.opacity = 0;
+		removeIntro();
+	}
+}
+function removeIntro() {
+		document.getElementById("back").style.display = "none";
+		document.getElementById("skip").style.display = "none";
+		document.getElementById("mouse").style.display = "none";
+}	
+	
+function link(href) {
+	window.location.href = href;
+
+}
+</script> 
+<style>
+.play:hover {
+	background-color:#2862FF;
+}
+.play {
+	background-color: #0074FF;
+}
+</style>
+
+<link href="../../webfonts/Roboto_Thin/stylesheet.css" rel="stylesheet" type="text/css">
+<link href="../../webfonts/Roboto_Regular/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onKeyDown="onKeyDown(event)" style="margin: 0px; overflow: hidden; width: 100vw; height: 100vh;">
+<img id="back" src="../../resources/projects/Anim/GraphGame1.png" style=" width: 100vw; height: 100vh; position: absolute; z-index: 2;" alt=""/>
+<img id="mouse" src="../../resources/slider/c-finger-pointing.png" style=" z-index: 3; position: absolute; width: 3vw; left: 50vw; top: 80vh;" alt=""/>
+<h1 style=" width: 100%; color: #A8A8A8; position: absolute; top: 80%; z-index: 4; text-align: center; font-family: 'Roboto Thin'; font-size: 300%; text-shadow: 0px 0px 11px #BFBFBF;" id="skip"> Press space to skip </h1>
+
+<div id="back2" style=" width: 100vw; height: 100vh; position: absolute; z-index: 1; text-align:center;">
+	<img  src="../../resources/projects/Anim/GraphGame9.png" style="width: 100vw; height: 100vh; position:absolute;top: 0px; left: 0px;" alt=""/>
+    <button onClick="link('projects/GraphGame/index.html')" class="play" style="position: absolute; left: 25%; top: 60%; width: 50%; height: 20%; -webkit-box-shadow: 0px 0px 33px 6px #5AB9FF; box-shadow: 0px 0px 33px 6px #5AB9FF; border: thick groove #3D5FFF; font-size: 300%;">Play</button>
+    <h1 style="width: 100%; position: absolute; top: 20%px; font-size: 500%; font-family: 'Roboto Regular'; color: #5059FF;"> Graph Game </h1>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <svg viewBox="0 0 126 125.5" y="0px" x="0px" id="svg_4" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <switch>
+    <foreignObject height="1" width="1" y="0" x="0"/>
+    <g>
+     <polyline points="126,125.5 1,125.5 1.5,125 1.5,0 126.4,124.9   " stroke-miterlimit="10" stroke="#000000" fill="#999999"/>
+    </g>
+   </switch>
+  </svg>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <use x="188.662159" y="-164.810211" transform="rotate(-90 429.74896240234375,253.76190185546872) matrix(0.8670320505265536,0,0,0.8797998578498749,32.97739839436463,187.6099491455534) " id="svg_5" xlink:href="#svg_4"/>
+  <text transform="matrix(8.25,0,0,5.192307472229004,-1116.5,-1295.4230089187622) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_6" y="308.237037" x="148.484848" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#000000"/>
+  <text transform="matrix(8.057483200947763,0,0,5.884295298176434,-2035.5626412587167,-1401.1427998430295) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_7" y="291.234943" x="318.902703" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#000000">3</text>
+ </g>
+</svg>

@@ -1,0 +1,185 @@
+<style>
+    input[type=text],
+    input[type=password],
+    input[type=email] {
+        height: 1.5vw;
+        line-height: 1.5vw;
+        font-size: 1vw;
+    }
+    .box {
+        top: 200px;
+        min-height: 20%;
+        min-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        box-shadow: 0px 0px 10px rgba(91, 91, 91, 1.00);
+        overflow: hidden;
+        background-color: hsla(0, 0%, 100%, 0.51);
+        text-align: center;
+    }
+    .login {
+        float: left;
+        width: 50%;
+        border-right: 1px hsla(0, 0%, 47%, 1.00) solid;
+    }
+    .student {
+        border-bottom: 1px hsla(0, 0%, 47%, 1.00) solid;
+    }
+    .create {
+        float: left;
+        width: 49%;
+        position: relative;
+    }
+    input[type=submit],
+    input[type=button] {
+        text-align: center;
+        background-color: rgba(9, 145, 0, 1.00);
+        box-shadow: 1px 1px 1px rgba(7, 124, 0, 1.00);
+        border: 0px;
+        min-width: 6vw;
+        min-height: 2vw;
+        line-height: 1.5vw;
+        font-size: 1vw;
+        color: white;
+        cursor: pointer;
+    }
+    input[type=submit]:hover,
+    input[type=button]:hover {
+        background-color: rgba(7, 124, 0, 1.00);
+    }
+    .create > input[type=button] {
+        margin-top: 255px;
+        position: absolute;
+        z-index: 10;
+        width: 70%;
+        left: 15%;
+    }
+</style>
+<div>
+    <h2>Forms</h2>
+    <p>This is the general style of our forms consisting of relative scaling and our call to action button</p>
+    <div class="code">
+        input[type=text],
+        <br/>input[type=password],
+        <br/>input[type=email] {
+        <br/>height: 1.5vw;
+        <br/>line-height: 1.5vw;
+        <br/>font-size: 1vw;
+        <br/>}
+        <br/>.box {
+        <br/>top: 200px;
+        <br/>min-height: 20%;
+        <br/>min-width: 400px;
+        <br/>margin-left: auto;
+        <br/>margin-right: auto;
+        <br/>width: 40%;
+        <br/>box-shadow: 0px 0px 10px rgba(91, 91, 91, 1.00);
+        <br/>overflow: hidden;
+        <br/>background-color: hsla(0, 0%, 100%, 0.51);
+        <br/>text-align: center;
+        <br/>}
+        <br/>.login {
+        <br/>float: left;
+        <br/>width: 50%;
+        <br/>border-right: 1px hsla(0, 0%, 47%, 1.00) solid;
+        <br/>}
+        <br/>.student {
+        <br/>border-bottom: 1px hsla(0, 0%, 47%, 1.00) solid;
+        <br/>}
+        <br/>.create {
+        <br/>float: left;
+        <br/>width: 49%;
+        <br/>position: relative;
+        <br/>}
+        <br/>input[type=submit],
+        <br/>input[type=button] {
+        <br/>text-align: center;
+        <br/>background-color: rgba(9, 145, 0, 1.00);
+        <br/>box-shadow: 1px 1px 1px rgba(7, 124, 0, 1.00);
+        <br/>border: 0px;
+        <br/>min-width: 6vw;
+        <br/>min-height: 2vw;
+        <br/>line-height: 1.5vw;
+        <br/>font-size: 1vw;
+        <br/>color: white;
+        <br/>cursor: pointer;
+        <br/>}
+        <br/>input[type=submit]:hover,
+        <br/>input[type=button]:hover {
+        <br/>background-color: rgba(7, 124, 0, 1.00);
+        <br/>}
+        <br/>.create > input[type=button] {
+        <br/>margin-top: 255px;
+        <br/>position: absolute;
+        <br/>z-index: 10;
+        <br/>width: 70%;
+        <br/>left: 15%;
+        <br/>}
+    </div>
+
+    <div class="box" style="">
+        <div class="login">
+            <div class="student">
+                <h2>Student Login</h2>
+                <form action="account.php" method="post">
+                    <label style="display: block; width: inherit; text-align: center;">Username:</label>
+                    <input required="required" name="user" style="width: 90%;" type="text">
+                    <br>
+                    <br>
+                    <label name="pass" style="display: block; width: inherit; text-align: center;">Password:</label>
+                    <input required="required" style="width: 90%;" type="password">
+                    <br>
+                    <br>
+                    <input value="Log In" type="submit">
+                </form>
+                <br>
+            </div>
+            <div class="teacher">
+                <h2>Teacher Login</h2>
+                <form action="account.php" method="post">
+                    <label style="display: block; width: inherit; text-align: center;">Username:</label>
+                    <input required="required" name="user" style="width: 90%;" type="text">
+                    <br>
+                    <br>
+                    <label name="pass" style="display: block; width: inherit; text-align: center;">Password:</label>
+                    <input required="required" name="pass" style="width: 90%;" type="password">
+                    <br>
+                    <br>
+                    <input name="teacher" value="Log In" type="submit">
+                </form>
+                <br>
+            </div>
+        </div>
+        <div class="create">
+            <div>
+                <h2>Create Account</h2>
+                <form action="account.php" method="post">
+                    <label style="display: block; width: inherit; text-align: center;">Username:</label>
+                    <input required="required" style="width: 90%;" type="text">
+                    <br>
+                    <br>
+                    <label style="display: block; width: inherit; text-align: center;">Password:</label>
+                    <input required="required" style="width: 90%;" type="password">
+                    <br>
+                    <br>
+                    <label style="display: block; width: inherit; text-align: center;">Student Password:</label>
+                    <input required="required" style="width: 90%;" type="password">
+                    <br>
+                    <br>
+                    <label style="display: block; width: inherit; text-align: center;">Email:</label>
+                    <input required="required" style="width: 90%;" type="email">
+                    <br>
+                    <br>
+                    <label style="display: block; width: inherit; text-align: center;">Phone:</label>
+                    <input required="required" style="width: 90%;" type="text">
+                    <br>
+                    <br>
+
+                    <input value="Create" type="submit">
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

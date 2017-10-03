@@ -1,0 +1,220 @@
+<!doctype html>
+<html onkeydown="keyevent(this, event,1);">
+<head>
+<meta charset="utf-8">
+<title>Space</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<script src="jquery.js"></script>
+<script src="script.js"></script>
+<script src="galaxy.js"></script>
+<script src="endGame.js"></script>
+<script src="upgrades.js"></script>
+<script src="variables.js"></script>
+<script src="testingEquations.js"></script>
+
+
+</head>
+
+<body onLoad="randomize(); buildanimation()" >
+<div class="game">
+
+<?xml version="1.0" encoding="utf-8"?>
+<svg class="planet" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
+<ellipse class="basecolor"  id="svgItem" stroke="#000000" stroke-miterlimit="10" cx="490.2" cy="560" rx="592.2" ry="150.7"/>
+</svg>
+
+
+    <!--<object type="image/svg+xml" id="svgObject" data="resources/Planet-01.svg" class="planet"></object>
+	<img class="background">
+	<img class="planet" src="resources/Planet-01.svg">-->
+	<div class="rocket"> 
+	<img class="base" src="resources/Rocketship.svg">
+	</div>
+	<div class="destroyed">
+	<img class="base" src="resources/destroyed.svg">
+	
+	</div>
+</div>
+
+<button class="test" onclick="callanimation()"></button>
+<div style="text-align: center">
+
+</div>
+
+<!--<div class="gifbox">
+<button onClick="refresh()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEW GAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+
+<button class="endgif" onClick="endgif(); hindsight()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONTINUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button> 
+</br>
+<img class="gif" src="resources/challenger.gif" alt=""> 
+</div>
+
+<div class="gifbox2">
+<button onClick="refresh()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEW GAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+<button onClick="continuejourney()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Continue Journey&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+</br>
+<img class="gif" src="resources/warp.gif" alt=""> 
+</div>-->
+
+<div class="HUD">
+	<h2>HUD</h2>
+	<button onClick="UpgradesHUD(true)" class="upgrades">UPGRADES</button>
+	<button class="Restart" onclick="refresh()">NEW GAME</button>
+    <button class="Save" onClick="save()">SAVE</button>
+	<button class="Load" onClick="load()">LOAD</button>
+	<button class="help" onclick="help()">HELP</button>
+	<button class="giveinfo" onclick="giveinfo()">GAME INFO</button>
+	<button class="callconsole" onClick="callconsole(0)">CONSOLE</button>
+	<!--<button class="bestloadout" onclick="bestloadout()">Best loadout</button>-->
+	<!--<button class="continue" onclick="continuejourney()">Check map (remove)</button></br>-->
+	<h2 id="hindsight"></h2>
+	<h4 id="hindsight2"></h2>
+</div>
+
+<div class="upgradeHUD">
+  <div class="partinfo">
+    <p id="parttitle">part</p></br>
+    <p id="lift1">lift</p>
+    <p id="mass1">mass</p>
+    <p id="cost1">cost</p>
+    <p id="aero1">aero</p>
+    <p id="storage1">storage</p>
+    <p id="fueluse1">fuel use</p>
+  </div>
+	<div class="upgrade drag">
+			<div class="card" id="1" data-loc="side" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img src="resources/Booster.svg"><span id="1001">Booster 1</span></div>  <!--we need to fix up the images, and make hover boxes to show attributes -->
+			<div class="card" id="2" data-loc="side" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img src="resources/Booster.svg"><span id="1002">Booster 2</span></div>
+			<div class="card" id="3" data-loc="side"  onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img src="resources/Booster.svg"><span id="1003">Booster 3</span></div>
+			<div class="card" id="4" data-loc="side" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img src="resources/Booster.svg"><span id="1004">Booster 4</span></div>
+			<div class="card" id="5" data-loc="inside" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img src="resources/Tank1.svg"><span id="1005">Tank 1</span></div>
+			<div class="card" id="6" data-loc="inside" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img src="resources/Tank1.svg"><span id="1006">Tank 2</span></div>
+			<div class="card" id="7" data-loc="side" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img id="fin1" src="resources/Fin1R.svg"><span id="1007">Fin 1</span></div>
+			<div class="card" id="8" data-loc="side" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img id="fin2" src="resources/Fin2R.svg"><span id="1008">Fin 2</span></div>
+			<div class="card" id="9" data-loc="side" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img id="fin3" src="resources/Fin3R.svg"><span id="1009">Fin 3</span></div>
+			<div class="card" id="10" data-loc="side" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img id="fin4" src="resources/Fin4R.svg"><span id="1010">Fin 4</span></div>
+			<div class="card" id="11" data-loc="top" onClick="highlight(this.id)"  onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img src="small cone 1.png"><span id="1011">Cone 1</span></div>
+			<div class="card" id="12" data-loc="top" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img src="small cone 2.png"><span id="1012">Cone 2</span></div>
+			<div class="card" id="13" data-loc="top" onClick="highlight(this.id)"  onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img src="big cone 1.png"><span id="1013">Cone 3</span></div>
+			<div class="card" id="14"  data-loc="top" onClick="highlight(this.id)" onMouseOver="partInfo(this.id)" onMouseOut="partInfoHide()"><img src="big cone 2.png"><span id="1014">Cone 4</span></div>
+
+	</div>
+	<div class="upgrade drop">
+	
+		<div class="center">
+			<div class="upgradeDrop2" id="110" ></div>
+			<div class="upgradeDrop" data-loc="top" id="100" onClick="moveHighlighted(this.id); addpart()">&nbsp;&nbsp;&nbsp;&nbsp;CONE&nbsp;&nbsp;&nbsp;<button class="x" onClick="removepart(100)">X</button></div>
+			<div class="upgradeDrop2" id="111" ></div>
+			<div class="upgradeDrop" data-loc="side" id="101" onClick="moveHighlighted(this.id); addpart()">BOOSTER/FIN<button class="x" onClick="removepart(101)">X</button></div>
+			<div class="upgradeDrop" data-loc="inside" id="102" onClick="moveHighlighted(this.id); addpart()">&nbsp;FUEL TANK&nbsp;<button class="x" onClick="removepart(102)">X</button></div>
+			<div class="upgradeDrop" data-loc="side" id="103" onClick="moveHighlighted(this.id); addpart()">BOOSTER/FIN<button class="x" onClick="removepart(103)">X</button></div>
+			<div class="upgradeDrop" data-loc="side" id="104" onClick="moveHighlighted(this.id); addpart()">BOOSTER/FIN<button class="x" onClick="removepart(104)">X</button></div>
+			<div class="upgradeDrop" data-loc="inside" id="105" onClick="moveHighlighted(this.id); addpart()">&nbsp;FUEL TANK&nbsp;<button class="x" onClick="removepart(105)">X</button></div>
+			<div class="upgradeDrop" data-loc="side" id="106" onClick="moveHighlighted(this.id); addpart()">BOOSTER/FIN<button class="x" onClick="removepart(106)">X</button></div>
+			<div class="upgradeDrop" data-loc="side" id="107" onClick="moveHighlighted(this.id); addpart()">BOOSTER/FIN<button class="x" onClick="removepart(107)">X</button></div>
+			<div class="upgradeDrop" data-loc="inside" id="108" onClick="moveHighlighted(this.id); addpart()">&nbsp;FUEL TANK&nbsp;<button class="x" onClick="removepart(108)">X</button></div>
+			<div class="upgradeDrop" data-loc="side" id="109" onClick="moveHighlighted(this.id); addpart()">BOOSTER/FIN<button class="x" onClick="removepart(109)">X</button></div>
+			
+			
+		</div>	
+
+	
+</div>
+	
+	<button class="upgrade Back" onClick="UpgradesHUD(false)"> Back </button>
+</div>
+
+
+
+
+<div class="Eq">
+	<h2>Equations</h2>
+	<p><select>
+   <option>KEY</option>
+   <option>A = accleration</option>
+   <option>G = gravity</option>
+   <option>AD = aerodynamics</option>
+   <option>E = elevation</option>
+   <option>L = lift</option>
+   <option>M = mass</option>
+   <option>T = thrust</option>
+   <option>S(t) = postion/height function</option>
+   <option>V(t) = velocity function</option>
+
+</select></p>
+    <p>A = T - G</p>
+    <p>T = (L * AD)/M </p>
+	<p>V(0) = 0</p> 
+	<p>S(0) = E</p><!--ALL FORMULAS NEED TO BE LOOKED OVER -->
+	<p id= "gravity" >Begin new game</p>
+	<p id= "atmosphere">Begin new game</p>
+	<p id= "elevation">Begin new game</p><br>
+	<p id="cost" class="costc">COST: $ 0</p>
+	<p id= "mass">mass: 1000</p>
+	<p id= "aero">aero: 100 %</p>
+	<p id= "lift">lift: 0</p>
+	<p id= "storage">storage: 0</p>
+	<p id= "fueluse">fuel use: 0</p>
+	
+</div>
+
+
+
+<div class="planetmap">
+<button class="newplanet1" id="200" onMouseOver="planetinfo(this.id)" onClick="planetstart(this.id)"><img id="image1" src="resources/planet1.200px.svg"></button>
+<button class="newplanet2" id="201" onMouseOver="planetinfo(this.id)" onClick="planetstart(this.id)"><img id="image2" src="resources/Pluto.svg"></button>
+<button class="newplanet3" id="202" onMouseOver="planetinfo(this.id)" onClick="planetstart(this.id)"><img id="image3" src="resources/Uranus.svg"></button>
+<button class="newplanet4" id="203" onMouseOver="planetinfo(this.id)" onClick="planetstart(this.id)"><img id="image4" src="resources/jupiter.svg"></button>
+<button class="newgalaxy" id="210" onMouseOver="planetinfo(0)" onClick="changegalaxy()"><img src="resources/galaxy-01.svg"></button>
+
+<div class="planetinfo">
+<p id="nprofit">profit</p>
+<p id="ndanger">danger</p>
+<p id="natmosphere">atmosphere</p>
+<p id="ngravity">gravity</p>
+<p id="nfunds"></p>
+</div>
+
+</div>
+
+<div class= "bottominfo" id="bottominfo">
+<p id="totalfunds">Total Funds: $10000&nbsp;&nbsp;&nbsp;Planet Bonus: $0</p>
+
+</div>
+
+
+<div class="animation" >
+<div class="winlose" id="winlose">YOU MADE IT</div>
+<div class="atheight"></div>
+<button class="launch" onClick="launch()">LAUNCH</button>
+<button class="abortlaunch" id="abortlaunch" onClick="closeanimation()">ABORT</button>
+<div class="groundheight">Starting Elevation</div>
+<div class="h30000">30000-----</div>
+<div class="h60000">60000-----</div>
+<div class="h90000">90000-----</div>
+<div class="h120000">120000-----</div>
+<div class="h150000">150000-----</div>
+<div class="h180000">180000-----</div>
+<div class="h210000">210000-----</div>
+<div class="h240000">240000-----</div>
+<div class="h270000">270000-----</div>
+<div class="h300000">300000-----</div>
+<img class="arocket" id="arocket" src="resources/Rocketship.svg">
+
+	
+</div>
+
+<div class="console" id="console" onkeydown="keyevent(this, event,3);" >
+<div class="consoleheader" id="consoleheader"> CONSOLE</br></br></div>
+<button class="leaveconsole" onClick="leaveconsole()">X</button>
+<button class="leaveconsole2" onClick="leaveconsole()">OK</button>
+<div class="innerconsole" id="innerconsole"></div>
+<div class="consolefooter"><input class="consoleinput" id="consoleinput" type="text" onkeydown="keyevent(this, event,0);"> </input><button class="enter" onclick="submitconsole(0); situationconsole()">Enter</button></div>
+</div>
+
+
+
+
+
+</body>
+</html>

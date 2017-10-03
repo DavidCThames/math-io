@@ -1,0 +1,230 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/desktop.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+    <title>Math I/O</title>
+	<style>
+		body {
+			height:100vh !important; 
+			font-family:"Roboto Light";
+			color:hsla(0,0%,20%,1.00)
+		}
+		div {
+			text-align: center;
+		}
+		.container {
+			background-image: url(resources/images/laptop.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			min-height:calc(100% - 150px);
+			height: auto !important; 
+			overflow:hidden;
+		}
+		.space {
+			height:10vh;
+		}
+		input[type=text], input[type=password], input[type=email] {
+			height:1.5vw;
+			line-height:1.5vw;
+			font-size:1vw;
+			font-family:"Roboto Light";
+		}
+		.box {
+			top: 200px; 
+			min-height:20%; 
+			min-width:400px; 
+			margin-left: auto; 
+			margin-right: auto; 
+			width: 40%; 
+			-webkit-box-shadow: 0px 0px 10px rgba(91,91,91,1.00); 
+			box-shadow: 0px 0px 10px rgba(91,91,91,1.00); 
+			overflow:hidden;
+			background-color:hsla(0,0%,100%,0.51);
+		}
+		.login {
+			float:left;
+			width:50%;
+			border-right:1px hsla(0,0%,47%,1.00) solid;
+		}
+		.student {
+			border-bottom: 1px hsla(0,0%,47%,1.00) solid;
+		}
+		.create {
+			float:left;
+			width:49%;
+			position:relative;
+		}
+		input[type=submit], input[type=button]  {
+			text-align: center;
+			background-color: rgba(9,145,0,1.00);
+			-webkit-box-shadow: 1px 1px 1px rgba(7,124,0,1.00);
+			box-shadow: 1px 1px 1px rgba(7,124,0,1.00);
+			border:0px;
+			min-width:6vw;
+			min-height:2vw;
+			line-height:1.5vw;
+			font-size:1vw;
+			font-family:"Roboto Light";
+			color:white;
+			cursor:pointer;
+		}
+		input[type=submit]:hover, input[type=button]:hover  {
+			background-color: rgba(7,124,0,1.00);
+		}
+		.create > div {
+			display:none;
+			opacity:0;
+			transition: display 0s linear 0s, opacity .5s linear .5s; 
+		}
+		.create > input[type=button] {
+			margin-top: 255px;
+			opacity:100;
+			transition: display .5s linear 0s, opacity 0.5s linear; 
+			position:absolute;
+			z-index:10;
+			width: 70%;
+			left:15%;
+		}
+	</style>
+	<script>
+		function createAcc() {
+			 
+			$('.create > input[type=button]').css('opacity', '0'); 
+			$('.create > div').css('display', 'block')
+			setTimeout(function() {$('.create > input[type=button]').css('display', 'none')}, 500)
+			setTimeout(function() {$('.create > div').css('opacity', '100')}, 10)
+		}
+	</script>
+    <!-- InstanceEndEditable -->
+<style>
+@import url("webfonts/Roboto_Thin/stylesheet.css");
+@import url("webfonts/Roboto_Regular/stylesheet.css");
+@import url("webfonts/Roboto_Light/stylesheet.css");
+@import url("webfonts/Socialico/stylesheet.css");
+@import url("css/styleDesktop.css");
+</style>
+<link href="webfonts/Socialico/stylesheet.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<!--<script src="../js/buildBoxes.js"></script>-->
+<script src="js/Boxes.js"></script>
+<script src="js/script.js"></script>
+<script src="js/scriptOther.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+
+
+    <!-- InstanceEndEditable -->
+
+</head>
+
+<body style="position: absolute; top: 0px; left:0px; width:100%; margin:0px">
+
+<header>
+<nav class="smallBar">
+    <section></section>
+	<a href="mainPage.html"><div><h2>Home</h2></div></a>
+    <a href="about.html"><div><h2>About</h2></div></a>
+    <a href="games.html"><div><h2>Games</h2></div></a>
+    <a href="accounts.html"><div><h2>Accounts</h2></div></a>
+    <a href="contact.html"><div><h2>Contact us</h2></div></a>
+    <a href="mobile.html"><div><h2>Mobile site</h2></div></a>
+    <section></section>
+</nav>
+
+<div class="socialbar">
+    	<p><a href="http://facebook.com">F</a><a href="http://plus.google.com">G</a><a href="http://twitter.com">L</a></p>
+</div>
+<div class="topbar" style="opacity: 1;">
+	<section>
+		<h1>Math I/O</h1>
+        <nav>
+        	<table>
+            <tr>
+        		<td><a href="index.html">Home</a><br></td>
+            	<td><a href="account.html">Account</a><br></td>
+            </tr><tr>
+            	<td><a href="about.html">About</a><br></td>
+            	<td><a href="contact.html">Contact us</a><br></td>
+            </tr><tr>
+            	<td><a href="games.html">Games</a><br></td>
+            	<td><a href="mobile.html">Mobile site</a><br></td>
+            </tr>
+            </table>
+        </nav>
+    </section>
+</div>
+</header>
+<div style="float:left; width:calc(50% - 800px); height:100vh;"></div>
+<div class="container">
+	<!--Warning: do not use div here-->
+    <!-- InstanceBeginEditable name="body" -->
+		<div class="space"></div>
+        <div class="box" style="">
+			<div class="login">
+				<div class="student">
+					<h2>Student Login</h2>
+					<form action="checkuser.php" method="post">
+					<label style='display: block; width: inherit; text-align: center;'>Username:</label>
+                    	<input style="width: 90%;" type="text">
+						</br></br>
+					<label style='display: block; width: inherit; text-align: center;'>Password:</label>
+                    	<input style="width: 90%;" type="password">
+						</br></br>
+					<input type="submit" value='Log In'>
+					</form>
+					</br>
+				</div>
+				<div class="teacher">
+					<h2>Teacher Login</h2>
+					<form action="checkuser.php" method="post">
+					<label style='display: block; width: inherit; text-align: center;'>Username:</label>
+                    	<input style="width: 90%;" type="text">
+						</br></br>
+					<label style='display: block; width: inherit; text-align: center;'>Password:</label>
+                    	<input style="width: 90%;" type="password">
+						</br></br>
+					<input type="submit" value='Log In'>
+					</form>
+					</br>
+				</div>
+			</div>
+			<div class="create">
+				<input type="button" value="Create Account" onClick="createAcc()">
+				<div>
+				<h2>Create Account</h2>
+				<form action="checkuser.php" method="post">
+				<label style='display: block; width: inherit; text-align: center;'>Username:</label>
+                    <input style="width: 90%;" type="text">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Password:</label>
+                    <input style="width: 90%;" type="password">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Student Password:</label>                   <input style="width: 90%;" type="password">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Email:</label>
+                    <input style="width: 90%;" type="email">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Phone:</label>
+                    <input style="width: 90%;" type="text">
+					</br></br>
+				
+				<input type="submit" value='Create'>
+				</form>
+				</div>
+			</div>
+				
+        </div>
+		<div class="space"></div>
+
+
+
+
+        <!-- InstanceEndEditable -->
+	<footer style="text-align:center;">
+			<p><span style="color:hsla(0,0%,61%,1.00)">© 2014 Math I/O LLC. All Rights Reserved</span> | <a href="legal/legal.html">Legal Stuff</a> | <a href="privacyPolicy.html">Privacy Policy</a> | <a href="termsOfUse.html">Terms of Use</a></p>
+		</footer>
+</div>
+<div style="float:right; width:calc(50% - 800px); height:100vh;"></div>
+	
+</body>
+<!-- InstanceEnd --></html>

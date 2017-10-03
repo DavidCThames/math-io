@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--TODO: when scrolling to new page, last page position: fixed; top: 0;-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Math I/O</title>
+
+    <style>
+        @import url("css/styleMobile.css");
+    </style>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/scriptMobile.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <figure></figure>
+        <div id="0">
+            <h3>Home</h3>
+        </div>
+        <div id="1">
+            <h3>About</h3>
+        </div>
+        <div id="2">
+            <h3>Games</h3>
+        </div>
+        <div id="3">
+            <h3>Account</h3>
+        </div>
+        <div id="4">
+            <h3>Contact</h3>
+        </div>
+    </nav>
+    <div>
+        <section>
+            <h1 class="h1">Math I/O</h1>
+            <iframe frameborder="0" style=" width:100vw; height:47.7vw;" src="slider.html" seamless scrolling="no"></iframe>
+            <a href="index.html#desktop">
+                <div style="width:100vw; text-align:center; background-color:#2d88ff; padding: 5vw; padding-top:1vh; padding-bottom:1vh; box-sizing:border-box;">
+                    <p>Click here for the Desktop website</p>
+                </div>
+            </a>
+            <div style="width:100vw; text-align:center; background-color:#CCCCCC; padding: 5vw; padding-top:1vh; padding-bottom:1vh; box-sizing:border-box;">
+                <p>Scroll down or use the bottom navigation bar
+                    <br>▼</p>
+            </div>
+        </section>
+
+        <section>
+            <h1>About</h1>
+            <p style="font-size: 24px; line-height: 2; color: #fff"><b>Math I/O is an educational website that is designed to help students practice mathematics in a fun and interesting way.</b>
+            </p>
+            <p>&nbsp;</p>
+        </section>
+
+        <section>
+            <h1>Games</h1>
+            <div style="width: 100vw; top: 5%; position: relative; text-align:center; height: 60%; margin-left: auto; margin-right: auto; overflow-y: scroll; overflow-x:hidden;">
+                <table style=" width:100vw; top: 30%; left:20%; text-align:center;" border="0">
+                    <tr>
+                        <td>
+                            <a href="projects/Darts/index.html">
+                                <img class="link" src="resources/projects/BannerDarts.jpg" alt="" />
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="projects/SpeedTransformations/index.html">
+                                <img class="link" src="resources/projects/BannerSpeedTransformations.jpg" alt="" />
+                        </td>
+                        </a>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="projects/EQBoat/index.html">
+                                <img class="link" src="resources/projects/BannerEQBoat.jpg" alt="" />
+                        </td>
+                        </a>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h1>Account</h1>
+            <p>Email
+                <br>
+                <input type="email">
+                <br>Password
+                <br>
+                <input type="password">
+                <br>
+                <br>
+                <button type="Submit">Submit</button>
+            </p>
+        </section>
+
+        <section>
+            <div class="container">
+                <nav>
+                    <section>
+                        <div style="background-color:white">
+                            <h1>Contact us</h1>
+                        </div>
+                        <a href="mailto:support@math-io.com">
+                            <div>
+                                <img src="resources/images/social/email.png">
+                                <h2>Email</h2>
+                                <p>support@math-io.com</p>
+                            </div>
+                        </a>
+
+                    </section>
+                    <section>
+                        <a href="http://blog.math-io.com">
+                            <div>
+                                <img src="resources/images/social/wordpress.png">
+                                <h2>Blog</h2>
+                            </div>
+                        </a>
+                        <a href="https://www.facebook.com/ninjacstudiosmathio">
+                            <div>
+                                <img src="resources/images/social/facebook.png">
+                                <h2>Facebook</h2>
+                            </div>
+                        </a>
+                    </section>
+                    <section>
+                        <a href="https://twitter.com/math_io">
+                            <div>
+                                <img src="resources/images/social/twitter.png">
+                                <h2>Twitter</h2>
+                            </div>
+                        </a>
+                        <a href="https://plus.google.com/b/100731948523284664244/100731948523284664244/posts">
+                            <div>
+                                <img src="resources/images/social/google.png">
+                                <h2>Google+</h2>
+                            </div>
+                        </a>
+                    </section>
+                </nav>
+            </div>
+        </section>
+    </div>
+</body>

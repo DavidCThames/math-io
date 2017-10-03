@@ -1,0 +1,288 @@
+html, body {
+	height:100%;
+	overflow:hidden;
+}
+body{
+    background: url(RoadSide-01.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height:100%;
+    margin: 0px;
+}
+/*.menu{	
+	position:absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+	z-index: 20;
+	text-align:center;
+}
+.menu div{
+	width: 100vw;
+	height: 100vh;
+}
+.menu  p{
+	position: absolute;
+	top: 30%;
+	width: 10%;
+	left: 35%;
+	height: 10%;
+	text-align: center;
+    cursor: pointer;
+}*/
+.scoreBar{
+	position:absolute;   /*keeps row on bottom of screen*/
+	top:3%;
+	left:0;
+	height:20.7vh;
+	width:100%;	     /*defines width for centering horizontally*/
+}
+.scoreClass{
+	text-align:center;
+	font-size:5vh;
+	font-weight:bold;
+	width:1;
+	margin:0;
+	margin-left:2vw; /*text-align does not center in sun perfectly. This corrects this*/
+}
+.upperBar{
+	background-color: teal;
+	background: rgba(0,128,128,0.8);
+	box-shadow:0px 0px 10px;
+	border: medium solid black;
+	display: flex;
+	flex-direction: row;
+	align-items:center;  /*centers bottom row*/
+	position:absolute;   /*keeps row on bottom of screen*/
+	bottom:13%;
+	left:0px;
+	height:20.7vh;
+	width:100%;
+}
+@media screen and (max-aspect-ratio: 12/7) {
+	.upperBar{
+		height:12.075vw;
+	}
+}
+.formula{
+	height:100%;
+	flex-grow: 1;
+	text-align:center;
+	margin:0;
+	width:0;
+}
+.formula p{
+	position:relative;
+	top:2.07vh;
+	margin:0;
+	font-size:8vh;
+}
+@media screen and (max-aspect-ratio: 12/7) {	/*adjusts font size if window is too thin*/
+	.formula p{
+		font-size:4.7vw;	/*multiplied font-size by aspect ratio*/
+		top:1.2075vw;
+	}
+}
+#reminder{
+	font-size:4vh;
+	position:relative;
+}
+@media screen and (max-aspect-ratio: 12/7) {	/*adjusts font size if window is too thin*/
+	#reminder{
+		font-size:2.3vw;	/*multiplied font-size by aspect ratio*/
+	}
+}
+.submit{
+	flex-grow:1;
+	text-align:center;
+	height:100%;
+	background-color: teal;
+	background: rgba(0,128,128,0.15);
+	color:black;
+	text-align:center;
+	box-sizing:border-box;
+	border-right: solid black;
+	cursor:pointer;
+	width:0;
+}
+.submit p{
+	margin: 0 auto;
+	line-height: 20.7vh;	/*centers p vertically in div (line-height = to height centers line vertically)*/
+	font-size:8vh;
+}
+@media screen and (max-aspect-ratio: 12/7) {	/*adjusts font size if window is too thin*/
+	.submit p{
+		font-size:4.7vw;	/*multiplied font-size by aspect ratio*/
+		line-height:12.075vw;
+	}
+}
+.submit:hover{
+	background-color:blue;
+	background: rgba(0,0,255,0.15);
+}
+.bottomBar {
+	background-color: teal;
+	background: rgba(0,128,128,0.8);
+	border:medium solid black;
+	display: flex;
+	flex-direction: row;
+	align-items:center;  /*centers bottom row*/
+	position:absolute;   /*keeps row on bottom of screen*/
+	bottom:0px;
+	left:0px;
+	width:100%;	     /*spreads out accel./dist./velocity even*/
+	height:13%;
+}
+.accel{
+	  flex-grow: 1;
+	  text-align:center;  /*keeps .distance on right of screen*/
+	  font-size:5vh;
+	  margin:0;
+	  width:0;
+}
+@media screen and (max-aspect-ratio: 12/7) {	/*adjusts font size if window is too thin*/
+    .accel{
+	   font-size:3vw;	/*multiplied font-size by aspect ratio*/
+     }
+} 
+.accel input{
+	   font-size:3vh;
+	   width: 7.5vh;
+	   background: rgba(255,255,255,0.8);
+}
+@media screen and (max-aspect-ratio: 12/7) {	/*adjusts font size if window is too thin*/
+	.accel input{
+	   font-size:3vw;	/*multiplied font-size by aspect ratio*/
+	   width: 7.5vw;	/*multiplied width by aspect ratio*/
+	 }
+}
+.options{
+	display: none;
+	
+}
+  
+.help {
+	display: none;
+	
+  
+}
+ .distance{
+	  flex-grow: 1;
+	  text-align:center;  /*keeps .distance in the center of the screen*/
+	  font-size:5vh	;
+	  margin:0;
+	  width:0;
+ }
+@media screen and (max-aspect-ratio: 12/7) {	/*adjusts font size if window is too thin*/
+	.distance{
+	  font-size:3vw	;	/*multiplied font-size by aspect ratio*/
+	}
+}
+.velocity{
+	  flex-grow: 1;
+	  margin: 4px;	  /*improves readability of numbers*/
+	  text-align:center; /*keeps .velocity on right of screen*/
+	  font-size:5vh;
+	  margin:0;
+	  width:0;
+}
+@media screen and (max-aspect-ratio: 12/7) {	/*adjusts font size if window is too thin*/
+	.velocity{
+	  font-size:3vw;	/*multiplied font-size by aspect ratio*/
+	}
+}
+
+ /*refer to .car for obstacle positioning logic*/
+ 
+ .obstacle {
+	position: absolute;
+	margin: 0;
+}
+
+@media screen and (min-aspect-ratio: 12/7) {
+	.obstacle {
+		top: 50%;
+		right: 10.04%;	/*arbitrary value. It looked okay*/
+		margin-top: -4.17vw;
+		height: 7.92vw; 	
+	}
+}
+
+@media screen and (max-aspect-ratio: 12/7) {
+	.obstacle {
+		top: 42.86%;
+		left: 50%;	
+		margin-left: 57.6vh; /*I spent a few hours doing math, got the image close, and guessed'n'checked the rest. Too...many...proportions...*/
+		height: 13.57vh;
+	}
+}
+/* Attempting to add 3 smaller cones. Math not finalized for max-aspect-ratio 
+@media screen and (min-aspect-ratio: 12/7) {
+	.obstacle {
+		top: 50%;
+		right: 10.04%;	/*arbitrary value. It looked okay/
+		margin-top: -3.2vw;
+		height: 5.92vw; 	
+	}
+	#ob2{
+		margin-top:-5.2vw;
+		right:11.54%;
+		z-index:-1;
+	}
+	#ob3{
+		margin-top:-7.5vw;
+		z-index:-2;
+	}
+}
+
+@media screen and (max-aspect-ratio: 12/7) {
+	.obstacle {
+		top: 44.52%;
+		left: 50%;	
+		margin-left: 57.6vh; /*I spent a few hours doing math, got the image close, and guessed'n'checked the rest. Too...many...proportions.../
+		height: 10.15vh;
+	}
+	#ob2{
+		
+	}
+	#ob3{
+	
+	}
+}*/	
+
+.car {
+    position: absolute;
+    margin:0;
+}	
+
+/*	
+want front of car [estimate] = (90, 290)  NOTE: css uses top left of image as starting point
+want top left of car pic [estimate]= (10, 240)
+image size = (960, 560)
+center of image = (480, 280)
+image aspect ratio = 12:7
+*/
+	
+/*@media below is used to keep car in position relative to background image, no matter the aspect ratio*/	
+	
+@media screen and (min-aspect-ratio: 12/7) {
+	.car {
+		top: 50%;	/* centers image vertically */
+		left: 1.04%;	/* 10 divided by 960 */
+		margin-top: -4.17vw;		/* (240-280) divided by 560. Then converted to width with aspect ratio (7/12) */
+		height: 7.92vw; 	/* 76 divided by 560. Then converted to width with aspect ratio (7/12) {NOTE:76 is an approximation of 80 (90-10)}*/
+	}
+}		
+
+@media screen and (max-aspect-ratio: 12/7) {
+	.car {
+		top: 42.86%;	/* 240 divided by 560 */
+		left: 50%;		/* centers image horizontally */
+		margin-left: -83.93vh;	 /* (10-480) divided by 960. Then converted to height with aspect ratio (12/7). */
+		height: 13.57vh;	/* 76 divided by 560 */
+	}
+}

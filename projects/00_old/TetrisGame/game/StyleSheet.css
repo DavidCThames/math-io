@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'ZeroesCondensed';
+    src: url('zeroes one.ttf');
+}
+@font-face {
+    font-family: 'Zeroes';
+    src: url('zeroes three.ttf');
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+#menu h1 {
+    color: red;
+    text-align: center;
+    padding-top: 2%;
+    font-size: 450%;
+}
+#menu #left {
+    display: inline-block;
+    padding-left: 25%;
+    float: left;
+    color: white;
+    max-width: 50%;
+}
+#menu #right {
+    display: inline-block;
+    padding-right: 25%;
+    float: right;
+    color: white;
+    max-width: 50%
+}
+#Play {
+    background-color: rgba(0, 0, 255, 0.3);
+    text-align: center;
+    border-radius: 60px;
+}
+#Play:hover {
+    background-color: rgba(0, 0, 255, 0.5)
+}
+#bar {
+    z-index: 2;
+    position: fixed;
+    color: white;
+    width: 100%;
+}
+#bar span {
+    padding-left: 7%;
+}
+#bar strong {
+    text-decoration: underline;
+}
+canvas {
+    background-color: black;
+    /*important for getting it to fit right*/
+    display: block;
+}
+div.input {
+    z-index: 2;
+    position: fixed;
+    top: 6%;
+    left: 6%;
+    right: 0%;
+    text-align: center;
+    font-family: Zeroes;
+    font-style: normal;
+    font-size: 1.5em;
+    background-color: rgba(134, 238, 238, 0.6);
+    border-color: #BFBFBF;
+    border-radius: 15px;
+    border-width: medium;
+    padding: 5px;
+    width: 40%;
+}
+#score {
+    z-index: 2;
+    position: fixed;
+    top: 6%;
+    left: 90%;
+    right: 0%;
+    text-align: center;
+    font-family: Zeroes;
+    font-style: normal;
+    font-size: 1.5em;
+    background-color: rgba(134, 238, 238, 0.6);
+    border-color: #BFBFBF;
+    border-radius: 15px;
+    border-width: medium;
+    padding: 5px;
+    width: 8%;
+}
+div.input input {
+    width: 10%;
+    font-size: 1em;
+    font-family: Zeroes;
+}
+div.input input:focus {
+    border-width: thick;
+    border-color: 'blue';
+}
+div.msg {
+    z-index: 2;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 50%;
+    top: 40%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    background-color: rgba(203, 0, 119, 0.95);
+    border-radius: 15px;
+    font-family: 'Zeros';
+    font-style: bold;
+    cursor: pointer;
+}
+div.msg div {
+    background-color: rgba(0, 153, 153, 0.9);
+    margin: auto;
+    max-width: 30%;
+    border-radius: 60px;
+}
+div.msg div:hover {
+    background-color: rgba(0, 153, 153, 1);
+}
+input[type=radio] {
+    display: none;
+}
+input[type=radio] + label {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: rgba(0, 5, 255, 1.00);
+    border-color: #001786;
+    -webkit-box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    width: 100%;
+}
+input[type=radio]:checked + label {
+    background-image: none;
+    background-color: rgba(184, 0, 3, 1.00);
+}
+input[type=radio] + label:hover {
+    background-image: none;
+    border-color: rgba(184, 0, 3, 1.00);
+    border-style: solid;
+}
+input[type=checkbox] {
+    display: none;
+}
+input[type=checkbox] + label {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: rgba(0, 5, 255, 1.00);
+    border-color: #001786;
+    -webkit-box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    width: 100%;
+}
+input[type=checkbox]:checked + label {
+    background-image: none;
+    background-color: rgba(184, 0, 3, 1.00);
+}
+input[type=checkbox] + label:hover {
+    background-image: none;
+    border-color: rgba(184, 0, 3, 1.00);
+    border-style: solid;
+}
+input[type=button] {
+    display: none;
+}
+input[type=button] + label {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: rgba(0, 5, 255, 1.00);
+    border-color: #001786;
+    -webkit-box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    box-shadow: 1px 1px 1px rgba(98, 98, 98, 1.00);
+    width: 100%;
+}
+input[type=button] + label:hover {
+    background-image: none;
+    border-color: rgba(184, 0, 3, 1.00);
+    border-style: solid;
+}
+#speedLabel {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2em;
+}

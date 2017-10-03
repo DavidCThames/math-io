@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Theta</title>
+
+<script src="jquery.js"></script>
+<script src="ocanvas-2.7.1.min.js"></script>
+<script src="draw.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+    <div id="MainMenu">
+    	<h1>Theta</h1>
+        <div id="GameModes">
+        	<h2>Gamemodes</h2>
+        	<input type="radio" id="radio1" name='mode' value="1" /><label for="radio1">Exact Value</label>
+            <br>
+            <input type="radio" id="radio2" name='mode' value="0" /><label for="radio2">Comming Soon...</label>
+            <br>
+            <br>
+            <input type="button" value="Play" onClick="play()">
+            <br>
+            <br>
+        </div>
+    </div>
+	<canvas></canvas>
+
+</body>
+</html>

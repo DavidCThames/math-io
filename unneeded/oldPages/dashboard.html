@@ -1,0 +1,427 @@
+<!doctype html>
+<html>
+<!-- InstanceBegin template="/Templates/desktop.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+    <meta charset="utf-8">
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>Math I/O</title>
+    <style>
+        .container {
+            overflow-x: hidden;
+        }
+        .container header {
+            width: 110%;
+            position: relative;
+            left: -5%;
+            background-color: hsla(0, 0%, 87%, 1.00);
+            margin: 0px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            text-align: center;
+            box-shadow: black 0px 0px 5px inset;
+        }
+        input[type=submit],
+        input[type=button] {
+            text-align: center;
+            background-color: rgba(9, 145, 0, 1.00);
+            -webkit-box-shadow: 1px 1px 1px rgba(7, 124, 0, 1.00);
+            box-shadow: 1px 1px 1px rgba(7, 124, 0, 1.00);
+            border: 0px;
+            min-width: 6vw;
+            min-height: 2vw;
+            line-height: 1.5vw;
+            font-size: 1vw;
+            font-family: "Roboto Light";
+            color: white;
+            cursor: pointer;
+            margin-bottom: 50px;
+        }
+        input[type=submit]:hover,
+        input[type=button]:hover {
+            background-color: rgba(7, 124, 0, 1.00);
+        }
+        input[type=submit].flush {
+            min-height: 4vw;
+            font-size: 2vw;
+            width: 50%;
+            margin-bottom: 0px;
+            float: left;
+            position: relative;
+            border-right: solid thin hsla(0, 0%, 58%, 1.00);
+            margin-top: 2px;
+        }
+        .container .logCount {
+            margin-top: 2px;
+            position: relative;
+            float: left;
+            width: 50%;
+            height: 4vw;
+            background-color: rgba(9, 145, 0, 1.00);
+            -webkit-box-shadow: 1px 1px 1px rgba(7, 124, 0, 1.00);
+            box-shadow: 1px 1px 1px rgba(7, 124, 0, 1.00);
+            line-height: 1.5vw;
+            font-size: 2vw;
+            font-family: "Roboto Light";
+            color: white;
+            padding: 1px;
+            padding-top: 1.3vw;
+            box-sizing: border-box;
+        }
+        .container .logCount > span {
+            background-color: white;
+            border: black solid 1px;
+            box-shadow: black 0px 0px 5px;
+            box-sizing: border-box;
+            color: black;
+        }
+        .container > div {
+            text-align: center;
+        }
+        .container > div.account > div {
+            float: left;
+            width: 50%;
+            text-align: center;
+            padding-right: 10%;
+            padding-left: 10%;
+            box-sizing: border-box;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        .container .account {
+            overflow: hidden;
+            background-color: hsla(211, 100%, 62%, 1.00);
+        }
+        .container > div.account > div.info {
+            border-right: gray 1px solid;
+            width: calc(50% - 1px);
+        }
+        input[type=text],
+        input[type=password],
+        input[type=email] {
+            height: 1.5vw;
+            line-height: 1.5vw;
+            font-size: 1vw;
+            font-family: "Roboto Light";
+            text-align: center;
+        }
+        .buy .studentNum {
+            background-color: white;
+            border: black 2px solid;
+            min-height: 2vw;
+            font-size: 1vw;
+            font-family: "Roboto Light";
+            text-align: center;
+            box-sizing: border-box;
+            -webkit-box-shadow: 1px 1px 1px rgba(7, 124, 0, 1.00);
+            box-shadow: 1px 1px 1px rgba(7, 124, 0, 1.00);
+            padding: 1px;
+        }
+        .buy img {
+            height: 2vw;
+            box-sizing: border-box;
+            -webkit-box-shadow: 1px 1px 1px rgba(7, 124, 0, 1.00);
+            box-shadow: 1px 1px 1px rgba(7, 124, 0, 1.00);
+            margin-top: 4px;
+        }
+        .buy input {
+            margin: 0px;
+        }
+        .container > div.account > a {
+            margin-top: 510px;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 50px;
+            transition: all .5s;
+            max-width: 200px;
+            height: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .container > div.account > a:hover {
+            background-color: hsla(209, 100%, 55%, 1.00);
+            color: white;
+        }
+        .container .stats {
+            overflow: hidden;
+            background-color: hsla(354, 100%, 62%, 1.00);
+            position: relative;
+        }
+        .stats ul {
+            width: 50%;
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+            height: 100%;
+            overflow: auto;
+            padding: left: 10%;
+            padding-right: 10%;
+            box-sizing: border-box;
+        }
+        .stats li {
+            width: 25%;
+            height: 0;
+            padding-bottom: 25%;
+            float: left;
+            background-size: 100% auto;
+            display: block;
+            background-color: rgba(42, 135, 250, 1.00);
+            border: white 1px solid;
+            box-sizing: border-box;
+        }
+        .soon > div {
+            -webkit-filter: blur(2px);
+            -moz-filter: blur(2px);
+            -o-filter: blur(2px);
+            -ms-filter: blur(2px);
+            filter: blur(2px);
+        }
+        .soon:after {
+            content: "Comming soon...";
+            padding-top: 20%;
+            box-sizing: border-box;
+            color: white;
+            text-shadow: 0px 0px 5px hsla(0, 0%, 0%, 1.00);
+            font-size: 36px;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 10;
+            background-color: rgba(0, 0, 0, 0);
+            background-image: url(resources/images/blackstripe.png)
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            for (a = 1; a < games.length; a++) {
+                $(".container > .stats ul > li:nth-child(" + a + ")").html(games[a].title);
+                $(".container > .stats ul > li:nth-child(" + a + ")").css("background", "url(" + games[a].img + ")");
+                //append <img class='beta' src='resources/images/beta.png'>
+            }
+        }
+    </script>
+    <!-- InstanceEndEditable -->
+    <style>
+        @import url("webfonts/Roboto_Thin/stylesheet.css");
+        @import url("webfonts/Roboto_Regular/stylesheet.css");
+        @import url("webfonts/Roboto_Light/stylesheet.css");
+        @import url("webfonts/Socialico/stylesheet.css");
+        @import url("css/styleDesktop.css");
+    </style>
+    <link href="webfonts/Socialico/stylesheet.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.js"></script>
+    <!--<script src="../js/buildBoxes.js"></script>-->
+    <script src="js/Boxes.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scriptOther.js"></script>
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+
+</head>
+
+<body style="position: absolute; top: 0px; left:0px; width:100%; margin:0px">
+
+    <header>
+        <nav class="smallBar">
+            <section></section>
+            <a href="mainPage.html">
+                <div>
+                    <h2>Home</h2>
+                </div>
+            </a>
+            <a href="about.html">
+                <div>
+                    <h2>About</h2>
+                </div>
+            </a>
+            <a href="games.html">
+                <div>
+                    <h2>Games</h2>
+                </div>
+            </a>
+            <a href="accounts.html">
+                <div>
+                    <h2>Accounts</h2>
+                </div>
+            </a>
+            <a href="contact.html">
+                <div>
+                    <h2>Contact us</h2>
+                </div>
+            </a>
+            <a href="mobile.html">
+                <div>
+                    <h2>Mobile site</h2>
+                </div>
+            </a>
+            <section></section>
+        </nav>
+
+        <div class="socialbar">
+            <p><a style="background-color:blue" href="https://www.facebook.com/ninjacstudiosmathio">F</a><a style="background-color:red" href="http://plus.google.com">G</a><a style="background-color:#0084FF" href="https://twitter.com/math_io">L</a><a style="background-color:#FFBB11" href="http://blog.math-io.com">W</a>
+            </p>
+        </div>
+        <iframe class="status" src="user/status.php" seamless></iframe>
+        <div class="topbar" style="opacity: 1;">
+            <section>
+                <h1>Math I/O</h1>
+                <!-- InstanceBeginEditable name="nav" -->
+                <select onChange="smallNav(this)" class="miniNav">
+                    <option value="mainPage.html">Home</option>
+                    <option value="about.html">About</option>
+                    <option value="games.html">Games</option>
+                    <option value="account.php" selected>Account</option>
+                    <option value="contact.html">Contact us</option>
+                    <option value="mobile.html">Mobile site</option>
+                </select>
+                <!-- InstanceEndEditable -->
+                <div class="accPlaceholder"></div>
+                <nav>
+                    <table>
+                        <tr>
+                            <td><a href="index.html">Home</a>
+                                <br>
+                            </td>
+                            <td><a href="account.php">Account</a>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="about.html">About</a>
+                                <br>
+                            </td>
+                            <td><a href="contact.html">Contact us</a>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="games.html">Games</a>
+                                <br>
+                            </td>
+                            <td><a href="mobile.html">Mobile site</a>
+                                <br>
+                            </td>
+                        </tr>
+                    </table>
+                </nav>
+            </section>
+        </div>
+    </header>
+
+    <div class="container">
+        <!--Warning: do not use div here-->
+        <!-- InstanceBeginEditable name="body" -->
+        <input class="flush" type="submit" value="Click here to reset logins">
+        <div class="logCount"><span>&nbsp;0&nbsp;</span>&nbsp;students currently loged on</div>
+        <header style="margin-top:4vw;">
+            <h1>Account</h1>
+        </header>
+        <div class="account">
+            <div class="info">
+                <h2>Change Info</h2>
+                <form action="checkuser.php" method="post">
+                    <label style='display: block; width: inherit; text-align: center;'>Username:</label>
+                    <input style="width: 90%;" type="text">
+                    </br>
+                    </br>
+                    <label style='display: block; width: inherit; text-align: center;'>Password:</label>
+                    <input style="width: 90%;" type="password">
+                    </br>
+                    </br>
+                    <label style='display: block; width: inherit; text-align: center;'>Student Password:</label>
+                    <input style="width: 90%;" type="password">
+                    </br>
+                    </br>
+                    <label style='display: block; width: inherit; text-align: center;'>Email:</label>
+                    <input style="width: 90%;" type="email">
+                    </br>
+                    </br>
+                    <label style='display: block; width: inherit; text-align: center;'>Phone:</label>
+                    <input style="width: 90%;" type="text">
+                    </br>
+                    </br>
+
+                    <input type="submit" value='Save'>
+                </form>
+            </div>
+            <div class="buy soon">
+                <div>
+                    <h2>Buy</h2>
+                    <table border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <input type="button" value="Teacher">
+                            </td>
+                            <td>
+                                <img src="resources/images/check.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                </br>
+                            </td>
+                            <td>
+                                </br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" value="Students">
+                            </td>
+                            <td>
+                                <div class="studentNum">20</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <a href="accDel.html">Deleat account</a>
+        </div>
+        <header>
+            <h1>Statistics</h1>
+        </header>
+        <div class="stats soon">
+            <div>
+                <div id="piechart" style="width: 50%; height: 500px; float:left;"></div>
+                <ul style="float:left">
+                    <li>EQ Boat</li>
+                    <li>Speed Transformations</li>
+                    <li>Darts</li>
+                    <li>Theta</li>
+                    <li>Comming soon...</li>
+                    <li>Comming soon...</li>
+                    <li>Comming soon...</li>
+                    <li>Comming soon...</li>
+                    <li>Comming soon...</li>
+                    <li>Comming soon...</li>
+                    <li>Comming soon...</li>
+                    <li>Comming soon...</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- InstanceEndEditable -->
+        <footer style="text-align:center;">
+            <p><span style="color:hsla(0,0%,61%,1.00)">© 2014 Math I/O LLC. All Rights Reserved</span> | <a href="legal/legal.html">Legal Stuff</a> | <a href="privacyPolicy.html">Privacy Policy</a> | <a href="termsOfUse.html">Terms of Use</a>
+            </p>
+        </footer>
+    </div>
+    <div style="float:right; width:calc(50% - 800px); height:100vh;"></div>
+    <!-- InstanceBeginEditable name="bodyEnd" -->
+
+
+
+
+
+
+    <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd -->
+
+</html>

@@ -1,0 +1,704 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/desktop.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+    <title>Math I/O</title>
+<!-- InstanceEndEditable -->
+<style>
+@import url("webfonts/stylesheet.css");
+@import url("webfonts/Roboto_Regular/stylesheet.css");
+@import url("webfonts/Roboto_Light/stylesheet.css");
+@import url("webfonts/Socialico/stylesheet.css");
+@import url("css/styleDesktop.css");
+</style>
+<link href="webfonts/Socialico/stylesheet.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<!--<script src="../js/buildBoxes.js"></script>-->
+<script src="js/Boxes.js"></script>
+<script src="js/script.js"></script>
+<script src="js/scriptOther.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<style>
+.box {
+	width:100%;
+	height: 700px;
+	text-align:center;
+	border-top:rgba(159,159,159,1.00) solid thin;
+	box-sizing:border-box;
+}
+.container h1 {
+	box-shadow:#727272 0px 2px 1.5px;
+	margin-bottom:0;
+	color:rgba(87,87,87,1.00);
+}
+.container h2 {
+	font-family:"Roboto"; font-weight: 100;
+	font-size:40px;
+}
+.container p {
+	
+}
+
+/*Contents*/
+.contents {
+	height:350px;
+}
+.contents > div{
+	height:200px;
+	width:100%;
+	max-width:700px;
+	margin-top:50px;
+	margin-left:auto;
+	margin-right:auto;
+	box-shadow:#727272 0px 1px 5px;
+}
+.contents  h3 {
+	border:rgba(159,159,159,1.00) solid thin;
+	background-color:white;
+	width:calc(100% / 3);
+	height:50%;
+	margin:0px;
+	float:left;
+	box-sizing:border-box;
+	transition:all .2s;
+	font-size:24px;
+	font-weight:300;
+	padding-top:30px;
+	cursor:pointer;
+}
+.contents h3:hover {
+	box-shadow:#727272 0px 0px 5px;
+	z-index:2;
+	position:relative
+}
+
+/*Purpose*/
+.purpose {
+	text-align:center;
+	background:rgba(251,0,154,1.00);
+	color:white;
+	height:350px;
+}
+.purpose p {
+	padding-left: 10%;
+	padding-right:10%;
+	box-sizing:border-box;
+	font-size:27px;
+	font-weight:300;
+	overflow:auto;
+	max-height:500px;
+}
+
+/*Beginnings*/
+.beginnings {
+	background-color:rgba(44,140,255,1.00);
+	color:white;
+}
+.beginnings h2 {
+	text-align:center;
+}
+.beginnings > p {
+	float:left;
+	width:calc(90% - 667px);
+	padding-left: 10%;
+	padding-right:10%;
+	box-sizing:border-box;
+	font-size:24px;
+	font-weight:300;
+	overflow:auto;
+	max-height:500px;
+}
+.beginnings > img {
+	box-sizing:border-box;
+	height: 500px;
+	max-width:50%;
+	float:right;
+	margin-right:10%;
+	box-shadow: 0px 0px 10px #333333;
+	transform:rotate(5deg);
+}
+
+/*Description*/
+.description {
+	background:url(resources/images/groupPhotoPlaceholder2.jpg) center no-repeat;
+	background-size:cover;
+	color:white;
+	text-align:center;
+	overflow:hidden;
+}
+.description > div {
+	height:700px;
+	width:100vw;
+	background:rgba(0,0,0,0.70);
+	overflow:hidden;
+}
+.description h2 {
+	
+}
+.description p {
+	position:relative;
+	left:10%;
+	width:80%;
+	padding-left: 10%;
+	padding-right:10%;
+	box-sizing:border-box;
+	font-size:24px;
+	font-weight:300;
+	overflow:auto;
+	max-height:500px;
+}
+
+/*Employees*/
+.employees {
+	width:100%;
+	padding-left:25%;
+	padding-right:25%;
+	min-width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+	height:400px;
+	transition:all .5s;
+	overflow:hidden;
+	background:#3DFF6B;
+}
+.employees > h2 {
+	color:white;
+}
+.employees h2.show {
+	font-family:"Roboto"; font-weight: 100;
+	font-size:35px;
+	width:100%;
+	margin:0px;
+	height:75px;
+	padding-top:10px;
+	background:white;
+	border:rgba(159,159,159,1.00) solid thin;
+	box-sizing:border-box;
+	float:left;
+	cursor:pointer;
+	transition:all .3s;
+	color:black;
+}
+.employees h2.hide {
+	font-family:"Roboto"; font-weight: 100;
+	font-size:35px;
+	width:100%;
+	margin:0px;
+	height:75px;
+	padding-top:10px;
+	background:white;
+	border:rgba(159,159,159,1.00) solid thin;
+	box-sizing:border-box;
+	float:left;
+	cursor:pointer;
+	transition:all .3s;
+	color:black;
+}
+
+.employees h2.show:hover {
+	box-shadow:#727272 0px 0px 5px;
+	z-index:2;
+	position:relative
+}
+.employees h2.hide:hover {
+	box-shadow:#727272 0px 0px 5px;
+	z-index:2;
+	position:relative
+}
+.employees > div {
+	position:relative;
+	z-index:1;
+	overflow:hidden;
+	box-shadow:#434343 0px 2px 10px;
+}
+
+/*ECards*/
+.ECard {
+	cursor:pointer;
+	float:left;
+	text-align:left;
+	width:50%;
+	height:75px;
+	background:white;
+	border:rgba(159,159,159,1.00) solid thin;
+	box-sizing:border-box;
+	position:relative;
+	z-index:1;
+}
+.employees .EHidden {
+	display: none;
+}
+.ECard > .img {
+	border-radius:50%;
+	float:left;
+	height:70px;
+	width:70px;
+	margin-top:2.5px;
+	margin-left:20px;
+	margin-right:20px;
+	background:url(resources/images/user.png) center;
+	background-size:70px 70px;
+}
+.ECard > h3 {
+	font-family:"Roboto"; font-weight: 300;
+	font-size:24px;
+	width:100%;
+	margin:0px;
+	margin-top:10px;
+}
+.ECard > p {
+	font-family:"Roboto"; font-weight: 300;
+	font-size:15px;
+	width:100%;
+	margin:0px;
+}
+.EHover .XECard {
+	transition:all .5s 0s !important;
+}
+.EHover:hover {
+	z-index:2;
+}
+.EHover:hover .XECard {
+	height: 150px !important;
+	transition:all .5s .5s !important;
+}
+
+/*Expanded ECards*/
+.XECard {
+	float:left;
+	text-align:left;
+	height:150px;
+	background:white;
+	border:rgba(159,159,159,1.00) solid thin;
+	box-sizing:border-box;
+	position:absolute;
+	left:-1px;
+	top:-1px;
+	z-index:2;
+	width:calc(100% + 2px);
+	overflow:hidden;
+}
+.XECard > h3 {
+	font-family:"Roboto"; font-weight: 300;
+	font-size:24px;
+	width:100%;
+	margin:0px;
+	margin-top:10px;
+}
+.XECard > p {
+	font-family:"Roboto"; font-weight: 300;
+	font-size:15px;
+	width:100%;
+	margin:0px;
+}
+.XECard > .img {
+	float: left;
+	height: 140px;
+	width: 140px;
+	margin-top: 2.5px;
+	margin-left: 20px;
+	margin-right: 20px;
+	background: url(resources/images/user.png) center;
+	background-size: 70px 70px;
+}
+
+/*Press*/
+.press {
+	background-color:rgba(255,56,56,1.00);
+	color:white;
+	text-align:center;
+	background:url(ai/NewsPaper.svg) center no-repeat; 
+	background-size:cover;
+}
+.press h2 {
+	
+}
+
+.press .flex {
+	width:80%;
+	position:relative;
+	left:10%;
+	flex-wrap:wrap;
+	flex-direction: row;
+	align-items:center;
+	display:flex;
+}
+.press .card {
+	width:500px;
+	margin:10px;
+	flex-grow:1;
+	cursor:pointer;
+	text-align:left;
+	height:150px;
+	background:white;
+	box-sizing:border-box;
+	box-shadow:#3D3D3D 0px 2px 10px;
+	transition: all .3s;
+	overflow:hidden;
+}
+.press .card:hover {
+	box-shadow:#3D3D3D 0px 2px 20px;
+}
+.press .card > .text {
+	padding-top:16px;
+	overflow:auto;
+	height:100%;
+	box-sizing:border-box;
+}
+.press .card p {
+	margin-top:0;
+	color:#000000;
+}
+.press .card img {
+	height:100%;
+	float:left;
+	margin-right:20px;
+}
+
+/*Press*/
+.legal {
+	background-color:#313131;
+	color:white;
+	text-align:center;
+}
+.legal h3 {
+	font-size:35px;
+	font-weight:300;
+	
+}
+
+.legal .flex {
+	width:80%;
+	position:relative;
+	left:10%;
+	flex-wrap:wrap;
+	flex-direction: row;
+	align-items:center;
+	display:flex;
+}
+.legal .card {
+	color:white;
+	display:block;
+	text-decoration:none;
+	width:500px;
+	margin:10px;
+	flex-grow:1;
+	cursor:pointer;
+	text-align:center;
+	height:150px;
+	background:white;
+	box-sizing:border-box;
+	box-shadow:black 0px 2px 10px;
+	transition: all .3s;
+	padding-top:15px;
+}
+.legal .card:hover {
+	box-shadow:black 0px 2px 25px;
+}
+
+</style>
+
+<script>
+	function showE() {
+		$('.employees').css("height", "550px");
+		$('.EHidden').css("display", "block");
+		$('.XECard').css("height", "0px");
+		$('.XECard').css("transition-delay", "0s");
+		$('.ECard').addClass('EHover');
+		$('.employees .show').css("display", "none");
+		//setTimeout(window.scroll(0, $('.container').height() + 150), 1000);
+		//setTimeout(console.log($('.container').height() + 150), 1000);
+	}
+	function hideE() {
+		$('.employees').css("height", "400px");
+		$('.EHidden').css("display", "none");
+		$('.XECard').css("height", "150px");
+		$('.XECard').css("transition-delay", "0s");
+		$('.ECard').removeClass('EHover');
+		$('.employees .show').css("display", "block");
+	}
+</script>
+<!-- InstanceEndEditable -->
+
+</head>
+
+<body style="position: absolute; top: 0px; left:0px; width:100%; margin:0px">
+
+<header>
+<nav class="smallBar">
+	<img class="options" src="ai/options.svg" onClick="options()">
+	<a class="ico" href="mainPage.html"><img class="ico" src="resources/images/favico.png"></a>
+	<a class="title" href="mainPage.html"><h1>Math I/O</h1></a>
+	<h2 onClick="pan(0, 0)">^ Top</h2>
+        <!-- InstanceBeginEditable name="smallNav" -->
+        <select onChange="smallNav(this)" class="smallMiniNav">
+              <option value="mainPage.html">Home</option>
+              <option value="about.html" selected>About</option>
+              <option value="games.html">Search games</option>
+              <option value="account.php">Account</option>
+              <option value="contact.html">Contact us</option>
+              <option value="mobile.html">Blog</option>
+        </select>
+        <!-- InstanceEndEditable -->
+</nav>
+<div class="optionsClose" onClick="options()">
+   	<h2>Welcome</h2>
+    <img class="optionsX" src="resources/images/xAlpha.png">
+</div>
+
+<div class="socialbar">
+    	<p><a style="background-color:blue" href="https://www.facebook.com/ninjacstudiosmathio">F</a><a style="background-color:red" href="http://plus.google.com">G</a><a style="background-color:#0084FF" href="https://twitter.com/math_io">L</a><a style="background-color:#FFBB11" href="http://blog.math-io.com">W</a></p>
+</div>
+<iframe class="status" src="user/accountSummary.php" seamless></iframe>
+<div class="topbar" style="opacity: 1;">
+	<img class="options" src="ai/options.svg" onClick="options()">
+	<section>
+		<a href="http://math-io.com"><h1>Math I/O</h1></a>
+        <!-- InstanceBeginEditable name="nav" -->
+                <select onChange="smallNav(this)" class="miniNav">
+                    <option value="mainPage.html">Home</option>
+                    <option value="about.html" selected>About</option>
+                    <option value="games.html">Search games</option>
+                    <option value="account.php">Account</option>
+                    <option value="contact.html">Contact us</option>
+                    <option value="mobile.html">Blog</option>
+                </select>
+                <!-- InstanceEndEditable -->
+        <nav>
+        	<table>
+            <tr>
+        		<td><a href="mainPage.html">Home</a><br></td>
+            	<td><a href="account.php">Account</a><br></td>
+            </tr><tr>
+            	<td><a href="about.html">About</a><br></td>
+				<td><a href="games.html">Search games</a><br></td>
+            	
+            </tr><tr>
+				<td><a href="http://blog.math-io.com">Blog</a><br></td>
+				<td><a href="contact.html">Contact us</a><br></td>
+            </tr>
+            </table>
+        </nav>
+    </section>
+</div>
+</header>
+
+<div class="container">
+	<!--Warning: do not use div here-->
+    <!-- InstanceBeginEditable name="body" -->
+        <h1 style="text-align: center"> About </h1>
+        
+        <div class="box contents">
+        	<div>
+        		<h3 onClick="pan(0, 560);">Purpose</h3>
+            	<h3 onClick="pan(0, 920);">Beginnings</h3>
+        		<h3 onClick="pan(0, 1610);">Description</h3>
+            	<h3 onClick="pan(0, 2315);">Employees</h3>
+				<h3 onClick="pan(0, 2710);">Press</h3>
+            	<h3 onClick="pan(0, 3405);">Legal</h3>
+        	</div>
+        </div>
+        
+		<div class="box purpose">
+        	<h2>Purpose</h2>
+        	<p> Many kids find, when they are younger, that they learn math best from games found across the internet, but as they get older the focus of their learning moves away from the games, into worksheets and lectures. They then learn to associated these things with work not fun and have trouble understanding the concepts without good graphical representations of them. The games we create focus on high school kids to provide them a fun and interactive way to learn the complex concepts taught in high school math classes. </p>
+		</div>
+        
+        <div class="box beginnings">
+        	<h2>Our Beginnings</h2>
+			<p>
+				We began when our high school math teacher, Jonathan Upperman, inspired Brandon Rozek to create new games for high school math classes. He started working on what is now Darts, but he realized that he could not finish the game on his own, so he asked David Thames to help him on the project. Over the following months, they continued to search for more coders to recruit. By the next year they had gained eight other people and were quickly and efficiently developing more games to prepare for their December release.
+			</p>
+			<img src="resources/images/P1030317.JPG">
+        </div>
+        
+        <div class="box description"><div>
+        	<h2>Description</h2>
+			<p>
+				We are a small, but quicly expanding, group of programmers, designers, and mathmeticians that develop fun, educational games. These games give students a deeper understanding of topics by visualizing them through the game's graphics and interactive elements. 
+			</p>
+			
+        </div></div>
+        
+        
+        <div class="box employees">
+        	<h2>Employees</h2>
+			<div>
+            <!--1------------------------->
+            <div class="ECard">
+            	<div class="img" style="background:url(resources/images/user.png);"></div>
+            	<h3>David Thames</h3>
+            	<p>Co-Founder</p>
+				<div class="XECard">
+            		<div class="img" style="background:url(resources/images/user.png);"></div>
+            		<h3>David Thames</h3>
+            		<p>Co-Founder</p>
+					<p><i>Worked together with Brandon to create Math I/O. He is also the webmaster and a lead programmer</i></p>
+            	</div>
+            </div>
+			<!--2------------------------->
+            <div class="ECard">
+            	<div class="img" style="background:url(resources/images/user.png);"></div>
+           		<h3>Brandon Rozek</h3>
+            	<p>Co-Founder</p>
+				<div class="XECard">
+            		<div class="img" style="background:url(resources/images/user.png);"></div>
+           			<h3>Brandon Rozek</h3>
+            		<p>Co-Founder</p>
+					<p><i>Started Math I/O. He is also a lead programmer in the development of new games.</i></p>
+            	</div>
+            </div>
+			<!--3------------------------->
+			<div class="ECard EHidden">
+            	<div class="img" style="background:url(resources/images/user.png);"></div>
+           		<h3>Stephen Shamangair</h3>
+            	<p>Lead Programmer</p>
+				<div class="XECard">
+            		<div class="img" style="background:url(resources/images/user.png);"></div>
+           			<h3>Stephen Shamangair</h3>
+            		<p>Lead Programmer</p>
+					<p><i>Joined the Math I/O team shortly after it began and continues to lead the development of new games.</i></p>
+            	</div>
+            </div>
+			<!--4------------------------->
+			<div class="ECard EHidden">
+            	<div class="img" style="background:url(resources/images/user.png);"></div>
+           		<h3>Zachary Henshaw</h3>
+            	<p>Programmer</p>
+				<div class="XECard">
+            		<div class="img" style="background:url(resources/images/user.png);"></div>
+           			<h3>Zachary Henshaw</h3>
+            		<p>Programmer</p>
+					<p><i>Joined the Math I/O team shortly after it began and continues to develop new games. </i></p>
+            	</div>
+            </div>
+			<!--5------------------------->
+			<div class="ECard EHidden">
+            	<div class="img" style="background:url(resources/images/user.png);"></div>
+           		<h3>Matthew Daniel</h3>
+            	<p>Game Developer</p>
+				<div class="XECard">
+            		<div class="img" style="background:url(resources/images/user.png);"></div>
+           			<h3>Matthew Daniel</h3>
+            		<p>Game Developer</p>
+					<p><i>Creates and develops new ideas for Games and helps program them.</i></p>
+            	</div>
+            </div>
+			<!--6------------------------->
+			<div class="ECard EHidden">
+            	<div class="img" style="background:url(resources/images/user.png);"></div>
+           		<h3>Jack Schumann</h3>
+            	<p>Programmer</p>
+				<div class="XECard">
+            		<div class="img" style="background:url(resources/images/user.png);"></div>
+           			<h3>Jack Schumann</h3>
+            		<p>Programmer</p>
+					<p><i>Plays a major part in the development of new Games.</i></p>
+            	</div>
+            </div>
+			<!--7------------------------->
+			<div class="ECard EHidden">
+            	<div class="img" style="background:url(resources/images/user.png);"></div>
+           		<h3>Madeleine Larrieu</h3>
+            	<p>Writer</p>
+				<div class="XECard">
+            		<div class="img" style="background:url(resources/images/user.png);"></div>
+           			<h3>Madeleine Larrieu</h3>
+            		<p>Programmer</p>
+					<p><i>Lead writer for Math I/O and runs the blog.</i></p>
+            	</div>
+            </div>
+			<!--8------------------------->
+			<div class="ECard EHidden">
+            	<div class="img" style="background:url(resources/images/user.png);"></div>
+           		<h3>Noah Miller</h3>
+            	<p>Physicist</p>
+				<div class="XECard">
+            		<div class="img" style="background:url(resources/images/user.png);"></div>
+           			<h3>Noah Miller</h3>
+            		<p>Physicist</p>
+					<p><i>Assists with the physics of games and helps to develop them.</i></p>
+            	</div>
+            </div>
+			
+            <h2 class="show"></h2>
+            <h2 class="show" onClick="showE()">Show All</h2>
+			
+			<h2 class="hide EHidden" onClick="hideE()">Hide</h2>
+			</div>
+        </div>
+        
+        <div class="box press">
+        	<h2>Press</h2>
+			<div class="flex">
+				<div class="card"> 
+            		<img src="resources/images/user.png">
+					<div class="text">
+					<p>Williamsburg Yorktown Daily | Get Schooled: Jamestown High Math Students Program Video Games to Teach Math Skills</p>
+            	    <p> "<em>dsjgksdrjg</em>"</br>
+            	    	-WYDAILY
+					</p>
+					</div>
+            	</div>
+				
+				<div class="card"> 
+            		<img src="resources/images/user.png">
+					<div class="text">
+					<p>Title</p>
+            	    <p>
+						"<i>dsjgksdrjg</i>"</br>
+            	    	-Author
+					</p>
+					</div>
+            	</div>
+				
+				<div class="card"> 
+            		<img src="resources/images/user.png">
+					<div class="text">
+					<p>Title</p>
+            	    <p>
+						"<i>dsjgksdrjg</i>"</br>
+            	    	-Author
+					</p>
+					</div>
+            	</div>
+			</div>
+			
+        </div>
+		
+		<div class="box legal">
+        	<h2>Legal Stuff</h2>
+			<div class="flex">	
+				<a href="legal/PrivacyPolicy.html" class="card" style="background-color:#9F48FF"> 
+            		<h3>Privacy Policy</h3>
+            	</a>
+				
+				<a href="legal/TermsOfUse.html" class="card" style="background-color:#FF4447"> 
+            		<h3>Terms of Use</h3>
+            	</a>
+				
+				<a href="legal/legal.html" class="card" style="background-color:hsla(28,100%,63%,1.00)"> 
+					<h3>Summary</h3>
+            	</a>
+			</div>
+			
+        </div>
+
+
+        <!-- InstanceEndEditable -->
+	<footer style="text-align:center;">
+			<p><span style="color:hsla(0,0%,61%,1.00)">© 2014 Math I/O LLC. All Rights Reserved</span> | <a href="legal/legal.html">Legal Stuff</a> | <a href="privacyPolicy.html">Privacy Policy</a> | <a href="termsOfUse.html">Terms of Use</a></p>
+		</footer>
+</div>
+<div style="float:right; width:calc(50% - 800px); height:100vh;"></div>
+	<!-- InstanceBeginEditable name="bodyEnd" -->
+
+
+
+
+
+    <!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

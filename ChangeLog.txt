@@ -1,0 +1,7 @@
+new lessons page
+"Coming Soon..." button instead of "Play" button on empty boxes
+remove boxes.js from pages
+TODO fix search
+TODO Math I/O LLC -> David Thames
+TODO Top Bar Margin
+TODO Main Page $().load([game])

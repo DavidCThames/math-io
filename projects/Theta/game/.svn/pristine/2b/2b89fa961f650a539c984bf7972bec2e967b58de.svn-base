@@ -1,0 +1,45 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Theta</title>
+
+<script src="jquery.js"></script>
+<script src="ocanvas-2.7.1.min.js"></script>
+<script src="draw.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="webfonts/Roboto_Light/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+    <div id="MainMenu">
+    	<h1>Theta</h1>
+        <div id="GameModes">
+        	<h2>Gamemodes</h2>
+        	<input type="radio" id="radio1" name='mode' value="1" /><label for="radio1">Exact Value</label>
+            <br>
+            <input type="radio" id="radio2" name='mode' value="0" /><label for="radio2">Comming Soon...</label>
+            <br>
+            <br>
+            <input type="button" value="Play" onClick="play()">
+            <br>
+            <br>
+        </div>
+    </div>
+
+	<canvas></canvas>
+    <div id=pannel" style="height: 30vh; width: 15vw; background-color: rgba(255,255,255,1.00); position: absolute; right: 5vw; top: 30vh; text-align: center; display: none;">
+    <table width="100%%" border="0">
+  <tr>
+    <td><h3>θ: </h3></td>
+    <td><h3 id="Theta">--</h3></td>
+  </tr>
+  <tr>
+  	<td style="width:20%"><h3>sin(θ)=</h3></td>
+    <td style="width:80%"><h3><input style="width:35%" type="number">/<input style="width:35%" type="number"></h3>
+</table>
+    </div>
+
+</body>
+</html>

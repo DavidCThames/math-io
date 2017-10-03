@@ -1,0 +1,10 @@
+* text=auto !eol
+/draw.js -text
+/index.html -text
+/jquery.js -text
+/ocanvas-2.7.1.min.js -text
+/style.css -text
+webfonts/Roboto_Light/Roboto-Light.ttf -text
+webfonts/Roboto_Light/stylesheet.css -text
+webfonts/Roboto_Regular/Roboto-Regular.ttf -text
+webfonts/Roboto_Regular/stylesheet.css -text

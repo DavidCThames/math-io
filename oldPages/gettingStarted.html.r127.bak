@@ -1,0 +1,438 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/desktop.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Math I/O | Marketing</title>
+
+<style>
+.scrollNotif {
+	width: 100vw;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	height:80px;
+	background-color:rgba(255,255,255,0.5);
+	z-index:1000;
+	text-align:center;
+}
+
+.scrollNotif p {
+	font-size:30px;
+	margin:0px;
+	font-family:"Roboto Light";
+	color:rgba(60,60,60,1.00);
+}
+
+.scrollNotif img {
+	height:40px;
+}
+.window {
+	width:100%;
+}
+
+.window h1 {
+	font-size:70px;
+	font-family:"Roboto Thin";
+	margin-top:0px;;
+}
+
+.panle {
+	width: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	height: 700px;
+	text-align:center;
+	overflow:hidden;
+	color:white;
+}
+
+.window p {
+	font-size:30px;
+}
+
+.window table {
+	font-size:30px;
+}
+
+.title {
+	height:200px;
+	background-color:hsla(0,0%,20%,1.00);
+	color:white;
+	padding-top:40px;
+	box-sizing:border-box;
+}
+
+.center {
+	width:100%;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:1400px;
+	position:absolute;
+	left:0px;
+	right:0px;
+}
+
+.panle img {
+	width:1400px;
+	height:700px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#teacher {
+	background-color:hsla(216,100%,60%,1.00);
+	color:white;
+}
+#student {
+	background-color:hsla(0,100%,63%,1.00);
+	color:white;
+}
+
+#student p {
+	float:right;
+	width:50%;
+}
+
+#teacher img, #student img {
+	top:100px;
+}
+
+#teacher img {
+	left:calc(50% - 235px);
+}
+
+#payment {
+	background:url(resources/images/coins.jpg);
+}
+
+.panle .card {
+	width:300px;
+	height:400px;
+	float: right;
+	position:relative;
+}
+
+#payment table {
+	float:left;
+	width:50%;
+}
+
+#account {
+	background: url(resources/images/laptop.jpg);
+	color: rgba(59,59,59,1.00);
+	background-size: cover;
+	background-position: center left;
+	text-shadow: 0px 0px 20px rgba(255,255,255,1.00);
+}
+
+.create {
+	width:30%;
+	position:relative;
+}
+
+input[type=submit], input[type=button]  {
+	text-align: center;
+	background-color: rgba(9,145,0,1.00);
+	-webkit-box-shadow: 1px 1px 1px rgba(7,124,0,1.00);
+	box-shadow: 1px 1px 1px rgba(7,124,0,1.00);
+	border:0px;
+	min-width:6vw;
+	min-height:2vw;
+	line-height:1.5vw;
+	font-size:1vw;
+	font-family:"Roboto Light";
+	color:white;
+	cursor:pointer;
+}
+
+#account input[type=submit]:hover, input[type=button]:hover  {
+	background-color: rgba(7,124,0,1.00);
+}
+
+#account input[type=text], input[type=password], input[type=email] {
+	height:25px;
+	line-height:25px;
+	font-size:20px;
+	font-family:"Roboto Light";
+}
+
+#account .box {
+	margin-left: auto; 
+	margin-right: auto; 
+	padding-bottom:20px;
+	width: 20%; 
+	-webkit-box-shadow: 0px 0px 10px rgba(91,91,91,1.00); 
+	box-shadow: 0px 0px 10px rgba(91,91,91,1.00); 
+	overflow:hidden;
+	background-color:hsla(0,0%,100%,0.51);
+}
+
+#account h1 {
+	margin-top 10px;
+}
+
+#account h3 {
+	background-color:rgba(255,42,45,1.00);
+	color:white;
+	margin-top:0px;
+	margin-bottom:5px;
+}
+
+#account h2 {
+	margin-top: 0px;
+}
+
+#buy {
+	background-color:rgba(113,255,85,1.00);
+}
+
+#buy td {
+	width:50%;
+	padding:10px;
+}
+
+#buy table {
+	max-width:1000px;
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#buy a {
+	width:100%;
+	border-top: solid 3px white;
+	margin:none;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+#buyHead {
+	border-top: solid 3px white;
+	background-color:white;
+	color:rgba(110,110,110,1.00)
+}
+#buy table div {
+	border:solid 3px white;
+	border-radius:3px;
+	width:70%
+}
+		
+</style>
+<!-- InstanceEndEditable -->
+<style>
+@import url("webfonts/Roboto_Thin/stylesheet.css");
+@import url("webfonts/Roboto_Regular/stylesheet.css");
+@import url("webfonts/Roboto_Light/stylesheet.css");
+@import url("webfonts/Socialico/stylesheet.css");
+@import url("css/styleDesktop.css");
+</style>
+<link href="webfonts/Socialico/stylesheet.css" rel="stylesheet" type="text/css">
+<script src="js/jquery.js"></script>
+<!--<script src="../js/buildBoxes.js"></script>-->
+<script src="js/Boxes.js"></script>
+<script src="js/script.js"></script>
+<script src="js/scriptOther.js"></script>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+
+</head>
+
+<body style="position: absolute; top: 0px; left:0px; width:100%; margin:0px">
+
+<header>
+<nav class="smallBar">
+    <section></section>
+	<a href="mainPage.html"><div><h2>Home</h2></div></a>
+    <a href="about.html"><div><h2>About</h2></div></a>
+    <a href="games.html"><div><h2>Games</h2></div></a>
+    <a href="accounts.html"><div><h2>Accounts</h2></div></a>
+    <a href="contact.html"><div><h2>Contact us</h2></div></a>
+    <a href="mobile.html"><div><h2>Mobile site</h2></div></a>
+    <section></section>
+</nav>
+
+<div class="socialbar">
+    	<p><a style="background-color:blue" href="https://www.facebook.com/ninjacstudiosmathio">F</a><a style="background-color:red" href="http://plus.google.com">G</a><a style="background-color:#0084FF" href="https://twitter.com/math_io">L</a><a style="background-color:#FFBB11" href="http://blog.math-io.com">W</a></p>
+</div>
+<iframe class="status" src="user/status.php" seamless></iframe>
+<div class="topbar" style="opacity: 1;">
+	<section>
+		<h1>Math I/O</h1>
+        <!-- InstanceBeginEditable name="nav" -->
+        <select onChange="smallNav(this)" class="miniNav">
+              <option value="mainPage.html" selected>Home</option>
+              <option value="about.html">About</option>
+              <option value="games.html">Games</option>
+              <option value="account.php">Account</option>
+              <option value="contact.html">Contact us</option>
+              <option value="mobile.html">Mobile site</option>
+        </select>
+        <!-- InstanceEndEditable -->
+        <div class="accPlaceholder"></div>
+        <nav>
+        	<table>
+            <tr>
+        		<td><a href="index.html">Home</a><br></td>
+            	<td><a href="account.php">Account</a><br></td>
+            </tr><tr>
+            	<td><a href="about.html">About</a><br></td>
+            	<td><a href="contact.html">Contact us</a><br></td>
+            </tr><tr>
+            	<td><a href="games.html">Games</a><br></td>
+            	<td><a href="mobile.html">Mobile site</a><br></td>
+            </tr>
+            </table>
+        </nav>
+    </section>
+</div>
+</header>
+
+<div class="container">
+	<!--Warning: do not use div here-->
+    <!-- InstanceBeginEditable name="body" -->
+	<div class="scrollNotif" data-0="opacity:1; !display:block;" data-100="opacity:0; display:block;">
+		<p>scroll for more</p>
+		<!--<img src="resources/images/scroll.png">-->
+		<img src="resources/images/scroll.png">
+	</div>
+	
+    <div class="window">
+		<div id="overview" class="panle title">
+			<h1> Overview </h1>
+		</div>
+		<div id="teacher" class="panle">
+			<div class="center">
+			<img
+				src="resources/images/marketing/teacher_1.png" 
+				data-400="top:100px;"
+				data-1250="top:850px;"
+			>
+			<img
+				src="resources/images/marketing/teacher_2.png"
+				data-400="opacity:0; top:100px;"
+				data-600="opacity:1; top:275px;"
+				data-1250="top:850px;"
+			>
+			<h1>Teacher</h1>
+			<p>The teacher can buy a membership on his or her account that allowes full access on any one computer to all games on Math I/O.</p>
+			</div>
+		</div>
+		<div id="student" class="panle">
+			<div class="center">
+			<img
+				src="resources/images/marketing/student_1.png" 
+				data-200="opacity:0;top:-400px;"
+				data-700="opacity:0; top:-400px;"
+				data-1100="opacity:1; top:100px;"
+			>
+			<img
+				src="resources/images/marketing/student_2.png"
+				data-200="opacity:0; top:-400px;"
+				data-700="opacity:0; top:-400px;"
+				data-1100="opacity:0; top:100px;"
+				data-1300="opacity:1;"
+			>
+			<h1>Student</h1>
+			<p>Once the Teacher has an acount he or she can buy student accounts in bulk to allow access to the games from multiple computers simultaneously. Multiple student packages can be bought together to handle different numbers of students.</p>
+			</div>
+		</div>
+		<div id="payment" class="panle">
+			<div class="center">
+			<h1>Payment</h1>
+			<p>You can pay through credit, debit, or PayPal.
+			<table style="margin-top:100px;" border="1" bordercolor="#FFFFFF" cellspacing="0">
+				<tr>
+					<th scope="col">Account Type</th>
+					<th scope="col">Price</th>
+				</tr>
+				<tr>
+					<td>Teacher</td>
+					<td>$10</td>
+				</tr>
+				<tr>
+					<td>10 Students</td>
+					<td>$7</td>
+				</tr>
+				<tr>
+					<td>20 Students</td>
+					<td>$10</td>
+				</tr>
+				<tr>
+					<td>50 Students</td>
+					<td>$20</td>
+				</tr>
+			</table>
+
+
+			<img 
+				data-bottom-top="opacity:0; margin-top:100px;" 
+				data--100-bottom="opacity:1; margin-top:0px;" 
+				class="card" src="resources/images/marketing/payment.png">
+			</div>
+		</div>
+		<div id="overview" class="panle title">
+			<h1> Get Started </h1>
+		</div>
+		<div id="account" class="panle">
+			<h1>Create an Account</h1>
+			<div class="create box">
+				<div>
+				<h3>After creating an account press back in your browser to return to this page and continue.</h3>
+				<form action="account.php" method="post">
+				<label style='display: block; width: inherit; text-align: center;'>Username:</label>
+                    <input type="text" required="required" style="width: 90%;">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Password:</label>
+                    <input type="password" required="required" style="width: 90%;">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Student Password:</label>                   <input type="password" required="required" style="width: 90%;">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Email:</label>
+                    <input type="email" required="required" style="width: 90%;">
+					</br></br>
+				<label style='display: block; width: inherit; text-align: center;'>Phone:</label>
+                    <input required="required"  style="width: 90%;" type="text">
+					</br></br>
+				
+				<input type="submit" value='Create'>
+				</form>
+				</div>
+			</div>
+		</div>
+		<div id="buy" class="panle">
+			<h1>Buy</h1>
+            <table border="1" bordercolor="#FFFFFF" cellspacing="0"><tr>
+            	<td>
+                	<input type="button" value="Teacher Account">
+                </td><td>
+                <div>
+                	<a  id="buyHead">Student Account</a>
+                	<a href="#">10</a>
+                	<a href="#">20</a>
+                	<a href="#">30</a>
+                </div>
+                </td>
+            </tr></table>
+		</div>
+	</div>
+    
+    
+    
+    
+
+	<!-- InstanceEndEditable -->
+	<footer style="text-align:center;">
+			<p><span style="color:hsla(0,0%,61%,1.00)">© 2014 Math I/O LLC. All Rights Reserved</span> | <a href="legal/legal.html">Legal Stuff</a> | <a href="privacyPolicy.html">Privacy Policy</a> | <a href="termsOfUse.html">Terms of Use</a></p>
+		</footer>
+</div>
+<div style="float:right; width:calc(50% - 800px); height:100vh;"></div>
+	<!-- InstanceBeginEditable name="bodyEnd" -->
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+	<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

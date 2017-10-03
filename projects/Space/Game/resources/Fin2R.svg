@@ -1,0 +1,38 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+ <defs>
+  <svg viewBox="0 0 126 125.5" y="0px" x="0px" id="svg_4" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <switch>
+    <foreignObject height="1" width="1" y="0" x="0"/>
+    <g>
+     <polyline points="126,125.5 1,125.5 1.5,125 1.5,0 126.4,124.9   " stroke-miterlimit="10" stroke="#000000" fill="#999999"/>
+    </g>
+   </switch>
+  </svg>
+  <svg id="svg_8" height="480" width="640" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+   <defs>
+    <svg id="svg_4" x="0px" y="0px" viewBox="0 0 126 125.5" xmlns:xlink="http://www.w3.org/1999/xlink">
+     <switch>
+      <foreignObject x="0" y="0" width="1" height="1"/>
+      <g>
+       <polyline fill="#999999" stroke="#000000" stroke-miterlimit="10" points="126,125.5 1,125.5 1.5,125 1.5,0 126.4,124.9   "/>
+      </g>
+     </switch>
+    </svg>
+   </defs>
+   <g>
+    <title>Layer 1</title>
+    <use xlink:href="#svg_4" id="svg_5" transform="matrix(0.8670320505265536,0,0,0.8797998578498749,32.97739839436463,187.6099491455534) " y="-212.288474" x="-119.284934"/>
+    <text fill="#000000" stroke="null" stroke-width="0" stroke-linejoin="null" stroke-linecap="null" x="185.901408" y="317.275" id="svg_6" font-size="24" font-family="serif" text-anchor="middle" xml:space="preserve" transform="matrix(11.833333015441895,0,0,6.153846263885498,-2090.8332719802856,-1649.2308044433594) ">1</text>
+   </g>
+  </svg>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <text transform="matrix(8.25,0,0,5.192307472229004,-1116.5,-1295.4230089187622) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_6" y="308.237037" x="148.484848" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#000000"/>
+  <use fill="#bfbfbf" x="0" y="0" transform="matrix(0.8937811851501465,0,0,0.8556979298591614,-0.2595719794188085,0.09776295241235022) " id="svg_9" xlink:href="#svg_8"/>
+  <rect id="svg_13" height="110" width="86" y="169" x="57" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" stroke="null" fill="#969696"/>
+  <text transform="matrix(6.084489528078933,0,0,4.846153736114502,-863.0656646839507,-1142.307659626007) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_14" y="291.793651" x="155.898876" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#000000">2</text>
+ </g>
+</svg>

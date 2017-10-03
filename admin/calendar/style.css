@@ -1,0 +1,17 @@
+.eventForm {
+    position:fixed;
+    left:75vw;
+    top:120px; 
+    background:rgb(111, 148, 255); 
+    color:#FFFFFF;
+    transition-property: all;
+    transition-duration: .5s;
+    width:20vw;
+    height:20vh;
+    min-height: 60px;
+    text-align: center;
+}
+
+.eventForm:hover {
+    background-color:#7e7e7e;
+}

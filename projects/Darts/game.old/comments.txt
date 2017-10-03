@@ -1,0 +1,170 @@
+GameData.js- Stores level data
+        Goal points (x,y) are made through the respective level functions and saved
+        Transformation data is saved here.
+
+        Random algorithm works like this:
+            Math.floor(Math.random() * (end - start + 1) + start);
+        and for lists....
+            myArray[Math.floor(Math.random() * myArray.length)];
+
+        Game.Level keeps track of players progress
+        Game.LastX/Game.LastY keeps track of points for responsive.js
+        TransformTimes/SubLevel keeps track of Transformation levels
+		
+		
+Test.js- Automates testing [Black Box Testing Style]
+    Expects Elements to be shown and score to be equal to 15 (25 if transformations)
+
+    Test.Errors - An array that contains all the errors once tests are ran.
+
+    Test.Multiple(choice, times) - Runs [choice] test [times] times
+        Basically works as: if option run option.test
+        Displays errors at end using Test.DisplayErrors function
+
+    Test.All() - Runs all tests
+        Runs each test once 
+        Displays errors at end using Test.DisplayErrors function
+
+    Test.DisplayErrors()
+        if no errors
+            Displays "All tests passed"
+        if errors
+            Shows errors 
+            Says how many errors there are
+
+    ------Simulation Testing [Not going into detail with simulatePlay()]-------
+    simulatePlay() - Wins 2 levels and loses 1, then checks if score equals 15
+                     unless it's a transformation level then checks if score = 25
+    
+    Test.Menu() - Checks Menu
+        If  menu,
+            topics,
+            nchoice,
+            or play is undefined or not shown error is raised
+        Simulates clicks with clickTest function
+        ClickTest() - Simulates topics being clicked
+            if topic cannot be clicked then error is raised
+
+    Test.[insert level name]() - Checks [level name]
+        Gets into said level
+        If canvas or input isn't defined or shown then an error is raised
+        Simulates level using simulatePlay function    
+		
+    
+Responsive.js- Handles responsiveness of website
+    
+    Game.Responsive.start()- Initiates Responsive functions
+        Initiates canvas, inputs, and menu functions
+        Draws the appropriate graph for the level
+        Draws points for level
+
+    Game.Responsive.canvas() - Adjusts canvas on resize
+        Changes width and height to window
+
+    Game.Responsive.inputs() - Adjusts input boxes on resize
+        Changes it to what seems as an appropriate size
+
+    Game.Responsive.menu() - Adjusts menu div on resize
+        Sets it to window size [Bug]
+
+    ---- Draggable div functions -----
+    Game.Responsive.mouseUp() - removes event listener on mouseup
+
+    Game.Responsive.mouseDown(e) - prepares for div move
+        stores drag offset from orriginal div
+        calls divMouse function
+
+    Game.Responsive.divMove(e) - moves the div
+        targets div
+        moves the div according to "offset" variable		
+		
+
+Input.js- Receives input and checks answer
+    At the end of the code it says the following
+    $(document).ready(Game.Start) Which runs the Start function when page is loaded
+
+    Core functions
+    --------------
+    Game.Start() - Prepares game and checks to see if browser is compatible
+        First it hides all the elements of the DOM that is not needed at the momment
+        Then it checks if the browser is compatible
+        If not then it shows an error message
+        If so then it calls the startEvents function
+        One of which that calls the GameStart function when play button is pressed
+
+    Game.startEvents() - Starts events necessary
+        Shows the menu
+        Adds event listeners one of which calls the GameStart function when clicked [Play]
+
+    Game.GameStart() - Prepares DOM for canvas game
+        Hides elements
+        Calls the PlayLevel function [in another file] which eventually leads to the check function
+
+    Game.Check() - Checks answer and prepares for future level progression
+        Turns off submit button event listener then calls a switch statement
+        Switch statement takes Game.Type as it's argument and uses it to decide which equation function checks 
+        If win then calls afterLevel(true) if lost then it calls afterLevel(false)
+
+    Game.afterLevel(win) - Takes win as an input and displays whether player won or not
+        Creates variable containing text for message box
+        Hides input
+        If the person won...
+            Increases their score by 10
+            Displays win message
+            Calls Reset(true)
+        If not...
+            Subtracts their score by 5
+            Displays lose message
+            Calsl Reset(false)
+    
+    Game.Reset(win) - takes win as an input and prepares for the next level
+        Resets the graph
+        Removes the message
+        Increases sublevel just in case it's a transformation level
+        Calls PlayLevel(Game.Type, x)
+        x is...
+	        if Game.Type is Linear/Quadratic Transformations then it's Game.TransformationTimes
+	        if not then it's (times-1)
+        Turns on Submit button
+
+    Etc functions
+    ------------------
+    All equation functions are the same, takes goal as input
+    Obtains variables needed
+    Graphs the equation
+    Returns y for given goal [x]
+
+    Game.PreventAlpha(e) - Prevents any other thing than numbers and "/"s to be inputted
+        Takes an event as it's argument and prevents non numerical keys except for '/'
+        If enter is pressed will simulate Submit button click
+        Contains key/char codes and checks when key is pressed to see if it's one of the permitted
+
+    Game.Fix(str) - Allows fractional input
+        Takes a string as a argument
+        Checks if "/" is detected
+        If so..
+	        It takes the string before the / and divides it by the string after it
+        If not..
+	        Just returns the number form of the string
+
+    Game.TimeSet() - Allows for the time to be set
+        if nChoice is not a number
+            Gives you div to select time
+
+    Game.RunTimer() - Runs the timer
+        Subtracts the time by 1
+        if time is 0
+            stops timer
+        if transformation level
+            stops when 4 levels are completed		
+			
+PlayLevel.js- single function code that sets up/shows levels
+        Takes 1 argument: ntimes
+
+        when times = 0 or when game is over
+        it shows your score and then resets everything so it can show the menu
+
+        Otherwise uses switch statement to check Game.Type
+        Sets up appropriate points [and shifts if applicable]
+        Calls appropriate event listeners for buttons
+        Starts			

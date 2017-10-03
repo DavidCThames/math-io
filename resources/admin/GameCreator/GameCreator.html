@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Create Game Page</title>
+<style>
+body {
+	margin:0;
+	height:100vh;
+	width:100vw;
+	font-family:"Roboto", "Helvetica Neue"; font-weight: 300;
+}
+.topbar {
+	top:0px;
+	position:fixed;
+	width: 100vw;
+	margin-left: auto;
+	margin-right: auto;
+	height: 30px;
+	text-align: center;
+	font-family:"Roboto", "Helvetica Neue"; font-weight: 300;
+	font-size: 20px;
+	-webkit-box-shadow: 0px 0px 10px;
+	box-shadow: 0px 0px 10px;
+	z-index:10;
+}
+.on {
+	color:red;
+}
+.off {
+	color:black;
+}
+
+article {
+	position: absolute;
+	top: 30px;
+	width: 100%;
+	height: calc(100% - 80px);
+	text-align: center;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	overflow:auto;
+}
+textarea {
+	width:600px;
+	height:80px;
+}
+h1 {
+	font-size:36px;
+}
+.open {
+	display: block;
+}
+.closed {
+	display: none;
+}
+
+nav {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0px;
+	left:
+}
+nav > table {
+	width: 242px;
+	height:50px;
+	margin-left:auto;
+	margin-right:auto;
+}
+nav tr, nav td {
+	height:50;
+}
+nav span, p {
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: 0px;
+	margin-left: 1px;
+	background-color: white;
+	text-align: center;
+	font-size: 30px;
+	font-family:"Roboto", "Helvetica Neue"; font-weight: 300;
+	cursor: pointer;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	transition-property:all;
+	transition-duration:.2s;
+}
+nav p {
+	width:100px;
+}
+
+nav p:hover, nav span:hover {
+	-webkit-box-shadow: inset 0px 0px 10px hsla(0,0%,0%,1.00);
+	box-shadow: inset 0px 0px 10px hsla(0,0%,0%,1.00);
+}
+
+</style>
+
+<script src="GameCreator.js"></script>
+</head>
+
+<body>
+<div class="topbar">
+<span class="on" id="n1">Description</span>
+  &nbsp &nbsp  -  &nbsp &nbsp  
+<span class="off" id="n2">Design</span>
+  &nbsp &nbsp  -  &nbsp &nbsp  
+<span class="off" id="n3">Specifications</span>
+  &nbsp &nbsp  -  &nbsp &nbsp  
+<span class="off" id="n4">Finish</span>
+</div>
+
+<article id="sec1" class="open">
+	<h1>Description</h1>
+	<h2>Name</h2>
+		<input id="name" type="text">
+	<h2>summery</h2>
+		<textarea id="summery"></textarea>
+	<h2>Full Description</h2>
+		<textarea id="desc"></textarea>
+	<h2>Math behind the game</h2>
+		<textarea id="math"></textarea>
+	<h2>Credits(Ex..Programmer&lt;/br&gt;-Bob)</h2>
+		<textarea id="credits"></textarea>
+</article>
+
+<article id="sec2" class="closed">
+	<h1>Design</h1>
+	<h2>image(resources/images/...)</h2>
+		<input id="image" type="text">
+	<h2>Color(should be similar to image background)</h2>
+		<input id="color" type="color">
+</article>
+
+<article id="sec3" class="closed">
+	<h1>Specifications</h1>
+	<h2>ID in Boxes.js(last number in brackets + 1)</h2>
+		<input id="id" type="number">
+	<h2>Link(projects/.../index.html)</h2>
+		<input id="link" type="text">
+	<h2>beta</h2>
+		<input id="beta" type="checkbox">
+	<h2>date(YYYY-MM-DD)</h2>
+		<input id="date" type="date">
+	<h2>Specifications</h2>
+		<textarea id="spec"></textarea>
+</article>
+
+<article id="sec4" class="closed">
+	<h2>1. Add to Boxes.js</h2>
+		<textarea disabled id="boxes"></textarea>
+	<h2>2. Create HTML file in "<span id="linkCopy">[Link]</span>/" named "game.html"</h2>
+		<textarea disabled id="page"></textarea>
+	<h2>3. Create HTML file in "<span id="linkCopy2">[Link]</span>/" named "index.html"</h2>
+		<textarea disabled id="template"></textarea>
+	<h2 id="gameFile"></h2>
+</article>
+
+<nav>
+	<table><tr>
+		<td><span onClick="page(1)">1</span></td>
+		<td><span onClick="page(2)">2</span></td>
+		<td><span onClick="page(3)">3</span></td>
+		<td><p onClick="page(0)">next ></p></td>
+	</table><tr>
+</table>
+
+</nav>
+</body>
+</html>

@@ -1,0 +1,422 @@
+/* CSS Document */
+	img {
+		border: 0;
+	}
+	html {
+		margin: 0px;
+		font-family:"Roboto Light";
+	}
+	
+	.container {
+		margin-top: 150px;
+		position: relative;
+		max-width: 1600px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		height: inherit;
+	}
+	
+	/*==========Loading Screen==========*/
+	.loading {
+		background-color: white; 
+		position: fixed; 
+		left: 0px; 
+		top: 0px; 
+		width:100vw; 
+		height:100vh; 
+		z-index:100000;
+		transition-duration:1s;
+		transition-property:opacity;
+		opacity:1;
+	}
+	
+	.loading h1 {
+		position:fixed;
+		top:30%;
+		left:30%;
+		width:40%;
+		height:20%;
+		text-align:center;
+		font-size:100px;
+		font-family:"Roboto Thin";
+		color:rgba(140,140,140,1.00);
+	}
+	
+	.loading p {
+		position:fixed;
+		top:55%;
+		left:30%;
+		width:40%;
+		height:20%;
+		text-align:center;
+		font-size:25px;
+		font-family:"Roboto Thin";
+		color:rgba(140,140,140,1.00);
+		opacity: 0;
+	}
+	
+	.loading video {
+		width:100%;
+		position:fixed;
+		bottom: 5%;
+		max-height: 30%;
+		object-fit: fill;
+		opacity:0;
+		transition-property:opacity;
+		transition-duration:1s;
+	}
+	
+	/*==========Topbar==========*/
+	.topbar {
+		z-index: 1000;
+		width: 100vw;
+		height: 150px;
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		background-color: rgba(255,255,255,1.00);
+		opacity: .75;
+		color: rgba(112,112,112,1.00);
+		transition-property:top;
+		transition-duration:1s;
+	}
+	
+	.topbar section {
+		width:80%;
+		height:100%;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	.topbar h1 {
+		float: left;
+		font-family: "Roboto Thin";
+		font-size: 50px;
+	}
+	.topbar p {
+		float: left;
+		font-family: "Roboto Light";
+		position:relative;
+		font-size: 20px;
+		top: 45px;
+	}
+	
+	.topbar nav {
+		margin-top: 35px;
+		margin-bottom: auto;
+		float: right;
+		width: 50%;
+		height: 80px;
+		line-height: 25px;
+		font-size: small;
+		font-weight: bold;
+	}
+	
+	.topbar td {
+		padding-right:10vw;
+	}
+	
+	.topbar a {
+		color: rgba(96,96,96,1.00);
+		text-decoration: none;
+		font-weight: bold;
+		font-family: "Roboto Regular";
+	}
+	
+	.topbar a:hover {
+		color: black;
+		text-decoration: none;
+	}
+	
+	/*Social Bar*/
+	
+	.socialbar {
+		height: 25px;
+		width: 100%;
+		background-color: #1d1d1d;
+		position: absolute;
+		z-index: 1100;
+		font-family: Socialico;
+	}
+	
+	.socialbar p {
+		position: relative;
+		color: #A0A0A0;
+		font-weight: bolder;
+		float: right;
+		text-align: center;
+		margin: 0px;
+		height: 100%;
+		letter-spacing: 5vw;
+		line-height: 100%;
+		font-size:23px;
+	}
+	
+	.socialbar a {
+		float: right;
+		vertical-align:bottom;
+		display:block;
+		margin:0px;
+		position:relative;
+		height: 100%;
+		line-height: 100%;
+		text-decoration:none;
+		color: #A0A0A0; 
+		font-weight: bolder;
+	}
+	
+	.socialbar a:hover {
+		background-color:#070707;
+	}
+	
+	/*==========SmallBar==========*/
+	
+	.smallBar {
+		height:50px;
+		width: 100%;
+		position: fixed;
+		top:0px;
+		left: 0px;
+		z-index:1000;
+		-webkit-box-shadow: 0px 0px 20px rgba(114,114,114,1.00);
+		box-shadow: 0px 0px 20px rgba(114,114,114,1.00);
+		background-color:#1d1d1d;
+	}
+	
+	.smallBar > a > div {
+		background-color:#1d1d1d;
+		margin:0px;
+		width: 15%;
+		float:left;
+		border-width: 1px;
+   		border-left-style: solid;
+		border-right-style: solid;
+		border-top-width:0px;
+		border-bottom-width:0px;
+		border-image: linear-gradient(to bottom, gray, rgba(0, 0, 0, 0)) 1 100%;
+   			-webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(gray), to(rgba(0, 0, 0, 0))) 1 100%;
+    		-webkit-border-image: -webkit-linear-gradient(gray, rgba(0, 0, 0, 0)) 1 100%;
+    		-moz-border-image: -moz-linear-gradient(gray, rgba(0, 0, 0, 0)) 1 100%;    
+    		-o-border-image: -o-linear-gradient(gray, rgba(0, 0, 0, 0)) 1 100%;
+			
+		text-align:center;
+		font-size:10px;
+		height:45px;
+		/*background-color: white;*/
+		transition-property:all;
+		transition-duration:.1s;
+		
+		
+	}	
+	
+	.smallBar > a > div:hover {
+		/*border-top-style: solid;
+=======
+html {
+    margin: 0px;
+    font-family: "Roboto Light";
+}
+.container {
+    margin-top: 150px;
+    position: relative;
+    max-width: 1600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: inherit;
+}
+/*==========Loading Screen==========*/
+
+.loading {
+    background-color: white;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100000;
+    transition-duration: 1s;
+    transition-property: opacity;
+    opacity: 1;
+}
+.loading h1 {
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+    text-align: center;
+    font-size: 100px;
+    font-family: "Roboto Thin";
+    color: rgba(140, 140, 140, 1.00);
+}
+.loading p {
+    position: fixed;
+    top: 55%;
+    left: 30%;
+    width: 40%;
+    height: 20%;
+    text-align: center;
+    font-size: 25px;
+    font-family: "Roboto Thin";
+    color: rgba(140, 140, 140, 1.00);
+    opacity: 0;
+}
+.loading video {
+    width: 100%;
+    position: fixed;
+    bottom: 5%;
+    max-height: 30%;
+    object-fit: fill;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+/*==========Topbar==========*/
+
+.topbar {
+    z-index: 1000;
+    width: 100vw;
+    height: 150px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 1.00);
+    opacity: .75;
+    color: rgba(112, 112, 112, 1.00);
+    transition-property: top;
+    transition-duration: 1s;
+}
+.topbar section {
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.topbar h1 {
+    float: left;
+    font-family: "Roboto Thin";
+    font-size: 50px;
+}
+.topbar p {
+    float: left;
+    font-family: "Roboto Light";
+    position: relative;
+    font-size: 20px;
+    top: 45px;
+}
+.topbar nav {
+    margin-top: 35px;
+    margin-bottom: auto;
+    float: right;
+    width: 50%;
+    height: 80px;
+    line-height: 25px;
+    font-size: small;
+    font-weight: bold;
+}
+.topbar td {
+    padding-right: 10vw;
+}
+.topbar a {
+    color: rgba(96, 96, 96, 1.00);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Roboto Regular";
+}
+.topbar a:hover {
+    color: black;
+    text-decoration: none;
+}
+/*Social Bar*/
+
+.socialbar {
+    height: 25px;
+    width: 100%;
+    background-color: #1d1d1d;
+    position: absolute;
+    z-index: 1100;
+    font-family: Socialico;
+}
+.socialbar p {
+    position: relative;
+    color: #A0A0A0;
+    font-weight: bolder;
+    float: right;
+    text-align: center;
+    margin: 0px;
+    height: 100%;
+    letter-spacing: 5vw;
+    line-height: 100%;
+    font-size: 23px;
+}
+.socialbar a {
+    float: right;
+    vertical-align: bottom;
+    display: block;
+    margin: 0px;
+    position: relative;
+    height: 100%;
+    line-height: 100%;
+    text-decoration: none;
+    color: #A0A0A0;
+    font-weight: bolder;
+}
+.socialbar a:hover {
+    background-color: #070707;
+}
+/*==========SmallBar==========*/
+
+.smallBar {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    -webkit-box-shadow: 0px 0px 20px rgba(114, 114, 114, 1.00);
+    box-shadow: 0px 0px 20px rgba(114, 114, 114, 1.00);
+    background-color: #1d1d1d;
+}
+.smallBar > a > div {
+    background-color: #1d1d1d;
+    margin: 0px;
+    width: 15%;
+    float: left;
+    border-width: 1px;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-image: linear-gradient(to bottom, gray, rgba(0, 0, 0, 0)) 1 100%;
+    -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(gray), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient(gray, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image: -moz-linear-gradient(gray, rgba(0, 0, 0, 0)) 1 100%;
+    -o-border-image: -o-linear-gradient(gray, rgba(0, 0, 0, 0)) 1 100%;
+    text-align: center;
+    font-size: 10px;
+    height: 45px;
+    /*background-color: white;*/
+    transition-property: all;
+    transition-duration: .1s;
+}
+.smallBar > a > div:hover {
+    /*border-top-style: solid;
+		border-top-width: 4px;
+		border-top-color: #1d1d1d;*/
+    padding-top: 4px;
+    height: 55px;
+    -webkit-box-shadow: 0 4px 4px -2px #000000;
+    -moz-box-shadow: 0 4px 4px -2px #000000;
+    box-shadow: 0 4px 4px -2px #000000;
+}
+.smallBar a {
+    text-decoration: none;
+    color: rgba(132, 132, 132, 1.00);
+}
+.smallBar > section {
+    width: 5%;
+    float: left;
+    height: 45px;
+}

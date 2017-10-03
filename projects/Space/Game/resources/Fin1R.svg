@@ -1,0 +1,18 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <svg viewBox="0 0 126 125.5" y="0px" x="0px" id="svg_4" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <switch>
+    <foreignObject height="1" width="1" y="0" x="0"/>
+    <g>
+     <polyline points="126,125.5 1,125.5 1.5,125 1.5,0 126.4,124.9   " stroke-miterlimit="10" stroke="#000000" fill="#999999"/>
+    </g>
+   </switch>
+  </svg>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <use x="-119.284934" y="-212.288474" transform="matrix(0.8670320505265536,0,0,0.8797998578498749,32.97739839436463,187.6099491455534) " id="svg_5" xlink:href="#svg_4"/>
+  <text transform="matrix(11.833333015441895,0,0,6.153846263885498,-2090.8332719802856,-1649.2308044433594) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_6" y="317.275" x="185.901408" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" stroke="null" fill="#000000">1</text>
+ </g>
+</svg>

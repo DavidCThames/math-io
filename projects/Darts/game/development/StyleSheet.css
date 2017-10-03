@@ -1,0 +1,215 @@
+@font-face {
+    font-family: Ubuntu;
+    font-style: normal;
+    src: url(UbuntuMono-R.ttf);
+}
+@font-face {
+    font-family: Ubuntu;
+    font-weight: bold;
+    src: url(Ubuntu-M.ttf);
+}
+@font-face {
+    font-family: Ubuntu;
+    font-style: thin;
+    src: url(Ubuntu-L.ttf);
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.logo img {
+    margin-top: -3%;
+    float: left;
+    height: 6%;
+    width: 6%;
+}
+canvas {
+    display: block;
+}
+div.input {
+    z-index: 2;
+    position: fixed;
+    top: 6%;
+    left: 6%;
+    right: 0%;
+    text-align: center;
+    font-family: Ubuntu, Verdana sans-serif;
+    font-style: normal;
+    font-size: 1.5em;
+    background-color: rgba(134, 238, 238, 0.6);
+    border-color: #BFBFBF;
+    border-radius: 15px;
+    border-width: medium;
+    padding: 5px;
+}
+input[type=text] {
+    font-family: Ubuntu;
+    padding: 3px;
+    font-size: 0.8em;
+    margin: 10px;
+    width: 10%;
+}
+input[type=submit] {
+    font-family: Ubuntu;
+    border-radius: 20px;
+    padding: 10px;
+    background: #73B9FF;
+    border: none;
+}
+div.msg {
+    z-index: 2;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 50%;
+    top: 50%;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    background-color: rgba(134, 238, 238, 0.6);
+    border-color: #BFBFBF;
+    border-width: medium;
+    box-shadow: 0px 0px 10px rgba(78, 78, 78, 0.89);
+    border-radius: 15px;
+    font-family: Ubuntu, Verdana sans-serif;
+    font-style: bold;
+}
+.window {
+    z-index: 2;
+    position: fixed;
+    bottom: 0%;
+    top: 6%;
+    left: 85%;
+    right: 0%;
+    text-align: center;
+    width: 10vw;
+    height: 12vh;
+    background-color: rgba(134, 238, 238, 0.6);
+    border-color: #BFBFBF;
+    border-width: medium;
+    box-shadow: 0px 0px 10px rgba(78, 78, 78, 0.89);
+    border-radius: 15px;
+    font-family: Ubuntu, Verdana sans-serif;
+    font-style: bold;
+    overflow-y: auto;
+}
+#Score p {
+    font-size: 1.3em;
+}
+#Menu {
+    font-family: Ubuntu;
+    font-size: 30px;
+    text-align: center;
+}
+#Menu ul {
+    display: inline-block;
+}
+li:hover:not(.clicked) {
+    /*font-weight: bold;*/
+    color: rgba(26, 10, 255, 1);
+    text-shadow: 0px 0px 5px rgb(00, 00, 00);
+}
+#topics {
+    list-style-type: none;
+    height: 400px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+html {
+    height: 100%;
+    /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.1, #FFFFFF), color-stop(0.71, #C0B8FF), color-stop(0.86, #31A338));
+    background-image: -o-linear-gradient(bottom, #FFFFFF 10%, #C0B8FF 71%, #31A338 86%);
+    background-image: -moz-linear-gradient(bottom, #FFFFFF 10%, #C0B8FF 71%, #31A338 86%);
+    background-image: -webkit-linear-gradient(bottom, #FFFFFF 10%, #C0B8FF 71%, #31A338 86%);
+    background-image: -ms-linear-gradient(bottom, #FFFFFF 10%, #C0B8FF 71%, #31A338 86%);
+    background-image: linear-gradient(to bottom, #FFFFFF 10%, #C0B8FF 71%, #31A338 86%);*/
+    background-image: url(grass.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+}
+input[type=submit]:hover {
+    background-color: #D6EBFF;
+    font-weight: bold;
+}
+.clicked {
+    /*font-weight: bold;*/
+    text-shadow: 0px 0px 3px rgba(26, 10, 255, 1);
+    background-color: rgba(0, 157, 255, 0.34)
+}
+#timer {
+    z-index: 2;
+    position: fixed;
+    top: 6%;
+    right: 6%;
+    text-align: center;
+    color: red;
+    font-family: Ubuntu, Verdana sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    background-color: rgba(134, 238, 238, 0.6);
+    border-color: #000000;
+    border-radius: 15px;
+    border-width: 2px;
+    padding: 10px;
+    width: 150px;
+}
+.time {
+    display: inline;
+}
+#exit {
+    z-index: 2;
+    position: absolute;
+    top: 6%;
+    left: 1%;
+    margin-top: -30px;
+    margin-right: -30px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #AEAEAE;
+    border-radius: 30px;
+    background-color: #be5056;
+    font-family: Ubuntu;
+    font-size: 25px;
+    display: inline-block;
+    line-height: 0px;
+    padding: 14px 6px;
+}
+#exit:hover {
+    font-weight: bold;
+    background-color: #cc8589;
+}
+.choices > div {
+    border: solid;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+.choices {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    left: 25%;
+    width: 50%;
+}
+.topic {
+    border-bottom: solid rgba(0, 179, 206, .5);
+    width: 100%;
+    cursor: pointer;
+}
+.topic:hover {
+    background-color: rgba(255, 255, 255, .8)
+}
+.timeInput {
+    display: none;
+}
+.choices > div:hover {
+    box-shadow: 0px 0px 7px black inset;
+}
+.choices > div > div:hover {
+    box-shadow: 0px 0px 7px black inset;
+}

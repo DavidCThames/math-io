@@ -1,0 +1,2 @@
+[16-Jun-2014 20:00:32 America/New_York] PHP Fatal error:  Class 'PHPMailer' not found in /home/ninjacstudios/public_html/math-io.com/admin/blog_action.php on line 49
+[11-Jul-2014 21:21:15 UTC] PHP Fatal error:  require(): Cannot redeclare class phpmailer in /home/ninjacstudios/public_html/math-io.com/admin/blog_action.php on line 7

@@ -1,0 +1,470 @@
+<!doctype html>
+<html style="height: 100%;"><!-- InstanceBegin template="/Templates/Project.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+    <title>
+
+
+
+
+
+
+
+        Darts
+
+
+
+
+
+
+    </title>
+    <script>
+        var GameID = '3';
+    </script>
+    <!-- InstanceEndEditable -->
+
+<style>
+@import url("../../webfonts/stylesheet.css");
+@import url("../../webfonts/Roboto_Light/stylesheet.css");
+
+body {
+	margin:0px;
+}
+h1 {
+	font-family:"Roboto"; font-weight: 100;
+	color: white;
+	font-size: 2vw;
+	height: 10%;
+}
+
+p {
+	font-family:"Roboto"; font-weight: 300;
+}
+
+#desc p {
+	color: white;
+}
+
+.top {
+	overflow: hidden; 
+	max-width:1110px; 
+	margin-left:auto; 
+	margin-right:auto;
+	-webkit-box-shadow: 0px 0px 10px; 
+	box-shadow: 0px 0px 10px;
+	position:relative;
+	z-index:1000;
+}
+
+#img {
+	float: left;
+	height: 33.75vw;
+	min-height: 225px;
+	max-height: 375px;
+	width: calc(50% - 3px);
+	min-width: 300px;
+	/*max-width: 500px;
+	margin-right: 5px; 
+	margin-bottom: 5px; 
+	margin-top: 5px; 
+	border-style: ridge;*/ 
+	overflow-x: visible;
+}
+
+#desc {
+	float: right; 
+	height: 33.75vw; 
+	min-height: 225px; 
+	max-height: 375px; 
+	width: 50%; 
+	min-width: 300px; 
+	/*max-width: 500px; 
+	margin-left: 5px; 
+	margin-bottom: 5px; 
+	margin-top: 5px; 
+	margin-right:5px; */
+	text-align: center;
+	border-left: white dotted 3px
+}
+
+.summary {
+	height: 80%; 
+	/*border: thin solid rgba(144,144,144,1.00); 
+	-webkit-box-shadow: 0px 0px 15px; 
+	box-shadow: 0px 0px 10px;*/
+	overflow-y: auto;
+}
+
+#tabCtrl {
+	border: solid thin white; 
+	text-align: left; 
+	min-height: 300px; 
+	-webkit-box-shadow: 0px 0px 10px;
+	box-shadow: 0px 0px 10px;
+	position:relative;
+	z-index:10;
+}
+
+.tabs {
+	height:26px; 
+	width:97%;
+	padding-bottom:28px;
+	max-width:1100px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.tabOn {
+	width: 30vw; 
+	max-width: 100px; 
+	float: left; 
+	border-top: thin solid rgba(144,144,144,1.00);
+	border-bottom: thin none rgba(144,144,144,1.00);
+	/*border-right: thin solid rgba(144,144,144,1.00); 
+	border-left: thin solid rgba(144,144,144,1.00);*/
+	cursor: pointer;
+	position:relative;
+	
+	-webkit-box-shadow: 0px 10px 10px;
+	box-shadow: 0px -6px 10px;
+	background-color:white;
+	color:gray;
+	z-index:100;
+}
+
+.tabOff {
+	width: 30vw; 
+	max-width: 100px; 
+	float: left; 
+	border-top: thin solid rgba(144,144,144,1.00); 
+	border-bottom: thin none rgba(144,144,144,1.00); 
+	cursor: pointer;
+	position:relative;
+	
+	border-right: thin solid rgba(144,144,144,1.00); 
+	border-left: thin solid rgba(144,144,144,1.00); 
+	background-color:hsla(0,0%,100%,0.4);
+	color:white;
+	z-index:1;
+	transition-property:all;
+	transition-duration:.2s;
+}
+
+.tabOff:hover {
+	background-color:white;
+	color: gray;
+}
+
+.footer {
+	border: solid thin white; 
+	text-align: left; 
+	min-height: 100px; 
+	-webkit-box-shadow: 0px 0px 10px;
+	box-shadow: 0px 0px 10px;
+	position:relative;
+	z-index:10;
+}
+
+input[value=Play] {
+	text-align: center;
+	background-color: rgba(9,145,0,1.00);
+	-webkit-box-shadow: 1px 1px 1px rgba(7,124,0,1.00);
+	box-shadow: 1px 1px 1px rgba(7,124,0,1.00);
+	border:0px;
+	min-width:20%;
+	min-height:35px;
+	cursor:pointer;
+	color:white;
+}
+input[value=Play]:hover {
+	background-color: rgba(7,124,0,1.00);
+}
+</style>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/Boxes.js"></script>
+<script>
+function setup() {
+	if(window.innerWidth < 638) {
+		$("#img").css("float", "none");
+		$("#img").css("marginLeft", "auto");
+		$("#img").css("marginRight", "auto");
+		$("#desc").css("float", "none");
+		$("#desc").css("marginLeft", "auto");
+		$("#desc").css("marginRight", "auto");
+	}
+	else {
+		$("#img").css("float", "left");
+		$("#img").css("marginLeft", "5");
+		$("#img").css("marginRight", "auto");
+		$("#desc").css("float", "right");
+		$("#desc").css("marginLeft", "auto");
+		$("#desc").css("marginRight", "5");
+	}
+	$("#desc").css("background-color", games[GameID].color);
+	$(".tabs").css("background-color", "hsl("  + invHue(games[GameID].color) + ")");
+}
+
+function activateTab(pageId) {
+    var tabCtrl = document.getElementById('tabCtrl');
+    var pageToActivate = document.getElementById("page" + pageId);
+    for (var i = 0; i < tabCtrl.childNodes.length; i++) {
+        var node = tabCtrl.childNodes[i];
+        if (node.nodeType == 1) { /* Element */
+    	    node.style.display = (node == pageToActivate) ? 'block' : 'none';
+    	}
+    }
+	
+	$(".tabOn").prop("class", "tabOff");
+	$("#tab" + pageId).prop("class", "tabOn");
+	/*$(".tabtext").css("color", "white");
+	setTimeout(function() {
+		$("#tab" + pageId).css("background-color", "white");
+		$("#tab" + pageId + "text").css("color", "rgba(147,147,147,1.00)");
+	}, 100);*/
+}
+
+function hexToHSL(color) { //converts hex color to HSV color
+	//Convert hex  to decimal
+	var r = parseInt(color.substr(1,2), 16); 
+	var g = parseInt(color.substr(3,2), 16);
+	var b = parseInt(color.substr(5,2), 16);
+	//Calculate hue
+	r /= 255, g /= 255, b /= 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, l = (max + min) / 2;
+
+    if(max == min){
+        h = s = 0;
+    }else{
+        var d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch(max){
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+        }
+        h /= 6;
+    }
+	h = h * 360;
+	s = s * 100;
+	l = l * 100;
+
+    return [h, s, l];
+}
+
+function HSLToColor(hsv) { //convert HSV array to color
+	var color = hsv[0] + ", " + hsv[1] + "%, " + hsv[2] + "%";
+	
+	return color;
+}
+
+function invHue(color) { //inverts hue of hex color
+	color = hexToHSL(color);
+	var hue = color[0]
+	hue = hue + 180;
+	while (hue > 360) {
+		hue = hue - 360;
+	}
+	color[0] = hue;
+	
+	return HSLToColor(color);
+}
+</script>
+</head>
+
+<body style="min-height: 100%;" onResize="setup()" onLoad="setup()">
+
+<div class="top" style=""> <!-- centers two top boxes if page is thin -->
+
+<div  id="img" style=""> <!-- top left box -->
+<img src="image.png" style="width:100%; height:100%">
+	
+</div>
+
+<div id="desc" style="">	<!-- top right box -->
+	<table  style="height: 99%"width="100%" border="0">
+		<tr>
+			<td style="height: 10%"><h1 style="height: 10%"><!-- InstanceBeginEditable name="Title" -->
+            
+            
+            
+            
+            
+            
+            
+            Darts
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<!-- InstanceEndEditable --></h1></td>
+		</tr>
+		<tr>
+			<td style="height: 80%">
+				<div class="summary" style="">
+					<p style="width: 80%; margin-left: auto; margin-right: auto; height: 80%;">
+					<!-- InstanceBeginEditable name="summary" -->
+
+
+
+
+
+
+                                Pop the boloons by drawing graphs.
+
+
+
+
+
+
+
+
+                                <!-- InstanceEndEditable --></p>
+				</div>
+				<a id="gamelink" href="game/index.html"><input type="button" value="Play"></input></a>
+                <br>
+                <a style="color: white; font-family:Roboto; font-weight:300;" href="game/index.html" target="_blank">play in new window</a>
+			</td>
+		</tr>
+	</table>
+
+</div>
+</div>
+
+<div style="margin-left: auto; margin-right: auto; text-align: center; width: 100%; min-width: 300px; max-width:1110px">	<!-- bottom box -->
+	<div class="st-container">
+    </div>
+    	<div class="tabs" style=""> <!--contains tabs-->
+        
+        	<div id="tab1" class="tabOn" style="" onClick="activateTab('1')">
+				<p id="tab1text" class="tabtext" style="">Description</p>
+			</div>
+            
+        	<div id="tab2" class="tabOff" style="" onClick="activateTab('2')"> 
+				<p id="tab2text" class="tabtext" style="">Specifications</p> 
+			</div>
+			
+			<div id="tab3" class="tabOff" style="" onClick="activateTab('3')"> 
+				<p id="tab2text" class="tabtext" style="">Math</p> 
+			</div>
+			
+			<div id="tab4" class="tabOff" style="" onClick="activateTab('4')"> 
+				<p id="tab2text" class="tabtext" style="">Credits</p> 
+			</div>
+        </div>
+    <div id="tabCtrl" style="">
+      <div id="page1" style="display: block; height: 100%; "><p><!-- InstanceBeginEditable name="Description(long)" -->
+
+
+
+
+
+
+
+
+
+
+                    Using different typs of equations, make graphs that draw a line through the balloons to pop them.
+
+
+
+
+
+
+
+
+
+                    <!-- InstanceEndEditable --></p></div>
+      <div id="page2" style="display: none; height:100%"><p><!-- InstanceBeginEditable name="Specifications" -->
+
+
+
+
+
+
+
+
+
+
+                    Requires Javascript
+
+
+
+
+
+
+
+
+
+
+                    <!-- InstanceEndEditable --></p></div>
+	  <div id="page3" style="display: none; height:100%"><p><!-- InstanceBeginEditable name="Math" -->
+
+
+
+
+
+
+
+
+
+
+                    Math Behind it
+
+
+
+
+
+
+
+
+
+
+                    <!-- InstanceEndEditable --></p></div>
+	  <div id="page4" style="display: none; height:100%"><p><!-- InstanceBeginEditable name="Credits" -->
+
+
+
+
+
+
+
+
+
+
+                    Credits
+
+
+
+
+
+
+
+
+
+
+                    <!-- InstanceEndEditable --></p></div>
+    </div>
+	
+	<div class="tabs"> </div>
+
+	<div class="footer">
+		<p><a href="../../legal/legal.html" target="_parent">Legal Stuff</a> | <a href="../../legal/privacyPolicy.html" target="_parent">Privacy Policy</a> | <a href="../../legal/termsOfUse.html" target="_parent">Terms of Use</a></p>
+		<p>© 2014 Math I/O LLC. All Rights Reserved</p>
+	</div>
+</div>
+
+
+
+</body>
+<!-- InstanceEnd --></html>
